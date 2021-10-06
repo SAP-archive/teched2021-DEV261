@@ -1,4 +1,4 @@
-![Kyma runtime](kyma-runtime.svg?s=200)
+<img src="kyma-runtime.svg" width="200">
 # DEV261 - Build Extensions with SAP BTP, Kyma Runtime
 
 ## Description
