@@ -1,12 +1,17 @@
-# Session ID - Session Title
+# DEV261 - Build Extensions with SAP BTP, Kyma Runtime
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2021 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2021 session called DEV261 - "Build Extensions with SAP BTP, Kyma Runtime".  
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to making use of the advantages that come along with Kubernetes in the context of their SAP BTP projects. SAP BTP, Kyma runtime is the fully managed Kubernetes runtime based on the open-source project "Kyma". This cloud-native solution allows the developers to extend SAP solutions with serverless Functions and combine them with containerized microservices. The offered functionality ensures smooth consumption of SAP and non-SAP applications, running workloads in a highly scalable environment, and building event- and API-based extensions.
+
+During this session, you will learn how to make use of SAP BTP services in the context of a Kyma-based project. You will see how to 
+- setup your continous integration and delivery pipeline using "[SAP Continuous Integration and Delivery](https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery)" for deploying an HTML5 app into the [SAP Launchpad service](https://discovery-center.cloud.sap/serviceCatalog/launchpad-service), 
+- make use of [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud), 
+- and setup a connection to on-premise systems using the "[SAP Connectivity Service](https://discovery-center.cloud.sap/serviceCatalog/connectivity-service).
 
 ## Requirements
 
