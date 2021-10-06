@@ -1,5 +1,8 @@
-<img src="kyma-runtime.svg" width="300">
-# DEV261 - Build Extensions with SAP BTP, Kyma Runtime
+%% %2 %1
+| ---------------------- | ----------------- |
+| # DEV261 - Build Extensions with SAP BTP, Kyma Runtime  | <img src="kyma-runtime.svg" width="300"> |
+
+
 
 ## Description
 
