@@ -15,7 +15,14 @@ During this session, you will learn how to make use of SAP BTP services in the c
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+To follow the exercises in this repository, you need to have a free SAP BTP trial account or you make use of the free tier inside your SAP BTP global account. Details are described on [SAP.com](https://www.sap.com/products/business-technology-platform/trial.html).
+
+Furthermore, you need to have the following tools and frameworks installed on your computer:
+- [kubectl](https://developers.sap.com/tutorials/cp-kyma-download-cli.html) to interact with Kyma runtime via command-line interface (CLI),
+- [nodejs version 14.\*](https://nodejs.org/en/download/),
+- [SAP Cloud Connector](https://tools.hana.ondemand.com/#cloud) to setup the later communication from SAP BTP, Kyma runtime via SAP BTP Connectivity Service to your local compter emulating an on-premise system,
+
+It is recommended to enable SAP BTP, Kyma runtime upfront as the creation of the runtime can take up to one hour. Simply follow the [SAP developer tutorial](https://developers.sap.com/tutorials/cp-kyma-getting-started.html). 
 
 ## Exercises
 
