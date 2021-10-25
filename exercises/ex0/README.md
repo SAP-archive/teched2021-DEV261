@@ -1,24 +1,103 @@
-# Level 1 Heading
+# Configure Subaccount entitlements
 
-In this exercise, you will...
+#### NOTE: Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
 
-## Level 2 Heading
+- In the Global Account choose **Entitlements** -> **Subaccount Assignments**
+- Choose your subaccount
+- Choose **Configure Entitlements**
+- Choose **Add Service Plans**
+- Choose the Entitlements...
+  - Entitlement: **SAP HANA Cloud** - Plan: **hana**
+  - Entitlement: **SAP HANA Schemas & HDI Containers** - Plan: **hdi-shared**
+  - Entitlement: **Continuous Integration & Delivery** - Plan: **default**
+- Choose **Save**
 
-After completing these steps you will have....
+# SAP BTP, Kyma runtime
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
+## Assignment of role collection for Kyma
 
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. 
+- In the menu on the left, chose **Security** -> **Users**
+- Choose your user
+- Choose the option **Assign Role Collection**
+- Assign the value **KymaRuntimeNamespaceAdmin\_\_\*\*\*** to yourself
+
+## Getting the Kubeconfig for CLI access and preparing Kyma runtime
+
+- In the Overview area of your subaccount open the **Console URL** found under **Kyma Environment**
+- At the top right of the window choose the user drop down and choose **Get Kubeconfig**
+- Set this to an environment variable
+
+```shell
+//mac and linux
+export KUBECONFIG=<KUBECONFIG_FILE_PATH>
+
+//windows powershell
+$ENV:KUBECONFIG="<KUBECONFIG_FILE_PATH>"
 ```
+
+- Create cap namespace in Kyma
+
+```shell
+kubectl create ns cap
+```
+
+# Launchpad service
+
+## Create Launchpad instance
+
+- Within subaccount choose **Service Marketplace**
+- Choose **Launchpad Service**
+- Choose **Create**
+
+## Assign Launchpad role
+
+- Assign Roles for the Launchpad Service by choosing **Security** -> **Users**
+- Choose your user
+- Choose the option **Assign Role Collection**
+- Assign the value **Launchpad_Admin** to yourself
+
+# CLOUD FOUNDRY
+
+- In the Overview area of your subaccount choose the option to **Enabled** the Cloud Foundry Environment
+- Choose the menu option **Cloud Foundry** -> **Spaces**
+- Choose the option **Create Space**
+- Provide the name **dev** and choose **Create**
+
+# SAP HANA Cloud
+
+#### NOTE: The creation of the instance will take some time
+
+## Instance creation
+
+- Open the CF **dev** space and choose **SAP HANA Cloud**
+- Choose **Create** -> **SAP HANA Database**
+- For **Type** choose **SAP HANA Cloud, SAP HANA Database**
+- Choose **Next Step**
+- Provide **teched** as the **Instance Name**
+- Provide a value for the **Administrator Password**
+- Choose **Next Step**
+- Choose **Next Step**
+- Choose **Next Step**
+- On the **SAP HANA Database Advanced Settings** choose the option **Allow all IP addresses**
+- Choose **Review and Create**
+- Choose **Create Instance**
+
+## HANA CLOUD SETUP
+
+- Within subaccount choose **Service Marketplace**
+- Choose **SAP HANA Schemas & HDI Containers**
+- Choose **Create** with the options
+  - Plan: **hdi-shared**
+  - Instance Name: **cap-orders-kyma**
+- Choose **Create**
+- Choose the option **View Instance**
+- Once the instance is created,open the instance and choose the option **Create** under **Service Keys**
+  - Service Key Name: **kyma**
+- Choose **Create**
+- Once created choose the option **View Credentials**
+- Copy the Credentials
+- Within the project root open the file **vcap_services.json** and replace the value `<service key>` with the Credentials value for the **hana** property
 
 ## Summary
 
