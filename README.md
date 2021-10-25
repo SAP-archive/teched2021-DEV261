@@ -37,6 +37,11 @@ git clone <repo url>
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
 - [Getting Started](exercises/ex0/)
+    - [Getting Started - Configure Subaccount entitlements](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#configure-subaccount-entitlements)
+    - [Getting Started - Kyma runtime](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#kyma-runtime)
+    - [Getting Started - Launchpad service](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#launchpad-service)
+    - [Getting Started - Cloud Foundry](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#cloud-foundry)
+    - [Getting Started - SAP HANA Cloud](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
 - [Exercise 1 - First Exercise Description](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
