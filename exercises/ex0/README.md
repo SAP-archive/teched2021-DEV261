@@ -12,7 +12,7 @@
   - Entitlement: **Continuous Integration & Delivery** - Plan: **default**
 - Choose **Save**
 
-# SAP BTP, Kyma runtime
+# Kyma runtime
 
 ## Assignment of role collection for Kyma
 
@@ -57,7 +57,7 @@ kubectl create ns cap
 - Choose the option **Assign Role Collection**
 - Assign the value **Launchpad_Admin** to yourself
 
-# CLOUD FOUNDRY
+# Cloud Foundry
 
 - In the Overview area of your subaccount choose the option to **Enabled** the Cloud Foundry Environment
 - Choose the menu option **Cloud Foundry** -> **Spaces**
@@ -83,7 +83,7 @@ kubectl create ns cap
 - Choose **Review and Create**
 - Choose **Create Instance**
 
-## HANA CLOUD SETUP
+## HANA Cloud setup
 
 - Within subaccount choose **Service Marketplace**
 - Choose **SAP HANA Schemas & HDI Containers**
