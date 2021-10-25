@@ -26,6 +26,12 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 
 It is recommended to enable SAP BTP, Kyma runtime upfront as the creation of the runtime can take up to one hour. Simply follow the [SAP developer tutorial](https://developers.sap.com/tutorials/cp-kyma-getting-started.html). 
 
+Furthermore, fork and clone this repository by opening this webview of the this repo. On the left hand side, choose the option Fork and choose your Github account. Once the creation of the fork is complete, clone the repo and open it in your desired editor.
+
+```
+git clone <repo url>
+```
+
 ## Exercises
 
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
