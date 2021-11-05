@@ -81,7 +81,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Exercise 9 - REQUIRE OAUTH FOR THE ACTION](exercises/ex2/)
 - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](exercises/ex2/)
 - [Exercise 11 - MOCK APPLICATION](exercises/ex2/)
-  - [Exercise 11.1 KYMA SERVERLESS FUNCTION]()
+  - [Exercise 11.1 - KYMA SERVERLESS FUNCTION]()
 
 **OR** Link to the Tutorial Navigator for example...
 
