@@ -37,14 +37,14 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
 Not it's time to apply the configmap to the cluster.
 ```
 kubectl -n cap apply -f ./credentials/html5-config-map.yaml
-
+```
 
 ## Exercise 1.3 Create the VCAP Service
 
 Open the file `./credentials/vcap_services.json` and replace the value <service key> with the Credentials value for the xsuaa property. This can be done manually or much easier using [jq](https://stedolan.github.io/jq/download/). To export the entire decoded secret using `jq` run:
 ```
 kubectl get secret cap-orders-xsuaa-binding -n cap -o json | jq '.data | map_values(@base64d)'
-
+```
 
 The result looks like this:
 ```json
@@ -70,7 +70,21 @@ The result looks like this:
 Copy the result into the `xsuaa.credentials` found in the vcap_services.json replacing the value of <service key>.
     
 Create a secret in Kyma containing the contents of this file. 
-    
+
+If using a bash shell:
+```
+kubectl -n cap create secret generic orders-vcap-services --from-literal "VCAP_SERVICES=$(<credentials/vcap_services.json)"
+```
+
+If using Windows PowerShell convert the file into base64 by running:
+```
+[convert]::ToBase64String((Get-Content -path "credentials/vcap_services.json" -Encoding byte))
+```
+
+Within the project open the file `exercies/orders-vcap-services.yaml` and create a copy of it saving it into the `credentials` directory of the project. Replace the contents of the <base64 encoded vcap_services> with the result of the previous command and apply the file.
+```
+kubectl -n cap apply -f ./credentials/orders-vcap-services.yaml
+```
 
 ## Summary
 
