@@ -1,4 +1,4 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Exercise 1 XSUAA Service Instance
 
 In this exercise, we will create and configure an instance of the "Authorization and Trust Management" service within SAP BTP, Kyma runtime. With that service instance, you will generate a Role Collection inside the SAP BTP subaccount which will controle the access to the later CAP application.
 
@@ -24,6 +24,14 @@ Choose the option `Decode` as these decoded values will need to be copied in the
 Create a copy of the file `./deployers/html5/config-map.yaml` within the `credentials` directory, naming it `html5-config-map.yaml`.
 
 Within the `html5-config-map.yaml` file replace the following values with the values found in the `cap-orders-xsuaa-binding` secret decoded in the previous step:
+![Credentials](/exercises/ex1/images/01_01_001.png)
+
+Replace the value of `cluster domain` with the Kyma cluster domain url.
+```yaml
+    \"clientId\": \"{clientid}\",
+    \"clientSecret\":\"{clientsecret}\",
+    \"tokenServiceURL\": \"{url}/oauth/token\",
+    \"URL\":\"https://cap-orders-service.{cluster domain}\"}]"
 
 
 
