@@ -53,7 +53,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
     - [CONFIGURATION](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
 - [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/)
 - [Exercise 2 - PREPARE APP FOR LOCAL USE](exercises/ex2/)
-- [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex2/)
+- [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex3/)
   - [Exercise 3.1 - CREATE THE GITHUB CREDENTIAL]()
   - [Exercise 3.2 - CREATE THE DOCKER CREDENTIAL]()
   - [Exercise 3.3 - CONFIGURE KUBECONFIG]()
