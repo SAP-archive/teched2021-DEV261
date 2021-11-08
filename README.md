@@ -68,7 +68,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
   - [Exercise 5.1 - DEPLOYMENT OPTION 1 - SAP CICD](exercises/ex5#exercise-51---deployment-option-1---sap-cicd)
   - [Exercise 5.2 - DEPLOYMENT OPTION 2 - kubectl](exercises/ex5#exercise-52---deployment-option-2---kubectl)
   - [Exercise 5.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex5#exercise-53---deployment-option-3---helm)
-- [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG ](exercises/ex2/)
+- [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG ](exercises/ex6/)
   - [Exercise 6.1 - DEPLOYMENT OPTION 1 - SAP CICD]()
   - [Exercise 6.2 - DEPLOYMENT OPTION 1 - kubectl]()
   - [Exercise 6.3 - DEPLOYMENT OPTION 2 - Helm]()

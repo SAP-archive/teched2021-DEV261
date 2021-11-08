@@ -4,8 +4,12 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 
 - The structure of the database is defined within the file **/db/schema.cds** and the associated data which will be inserted into the database can be found at **db/data**.
 - There are two resources related to the creation of the database:
+
   - A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
   - A Kubernetes job which processes the deployemnt relying on the vcap-services credential
+
+- Open the file **/deployers/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
+- Save the changes
 
 ## Exercise 5.1 - DEPLOYMENT OPTION 1 - SAP CICD
 
@@ -16,7 +20,8 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 
 - Open the file **/deployers/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
-- Build and push app
+
+- Build and push the container to your docker account
 
   ```shell
   docker build -t {your-docker-account}/orders-db-deployer -f ./deployers/db/Dockerfile .
