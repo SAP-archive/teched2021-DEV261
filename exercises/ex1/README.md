@@ -32,7 +32,7 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
     \"clientSecret\":\"{clientsecret}\",
     \"tokenServiceURL\": \"{url}/oauth/token\",
     \"URL\":\"https://cap-orders-service.{cluster domain}\"}]"
-
+```
 
 
 ## Exercise 1.2 Sub Exercise 2 Description
