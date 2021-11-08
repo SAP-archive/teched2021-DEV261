@@ -11,6 +11,21 @@ Apply the resource to create the service instance and binding for the XSUAA inst
 kubectl -n cap apply -f ./deployers/html5/xsuaa-service.yaml
 ```
 
+Inside the Kyma console, open the namespace `cap`. 
+
+Now open the service instance `cap-orders-xsuaa-instance` found under Service Management -> Instances.
+
+Choose the tab `Credentials` and choose the Secret `cap-orders-xsuaa-binding`.
+
+Choose the option `Decode` as these decoded values will need to be copied in the next steps. 
+
+## Exercise 1.3 Apply Credentials to the Config Map
+
+Create a copy of the file `./deployers/html5/config-map.yaml` within the `credentials` directory, naming it `html5-config-map.yaml`.
+
+Within the `html5-config-map.yaml` file replace the following values with the values found in the `cap-orders-xsuaa-binding` secret decoded in the previous step:
+
+
 
 ## Exercise 1.2 Sub Exercise 2 Description
 
