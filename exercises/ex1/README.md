@@ -71,12 +71,12 @@ Copy the result into the `xsuaa.credentials` found in the vcap_services.json rep
     
 Create a secret in Kyma containing the contents of this file. 
 
-If using a bash shell:
+**If using a bash shell**:
 ```
 kubectl -n cap create secret generic orders-vcap-services --from-literal "VCAP_SERVICES=$(<credentials/vcap_services.json)"
 ```
 
-If using Windows PowerShell convert the file into base64 by running:
+**If using Windows PowerShell** convert the file into base64 by running:
 ```
 [convert]::ToBase64String((Get-Content -path "credentials/vcap_services.json" -Encoding byte))
 ```
@@ -86,9 +86,13 @@ Within the project open the file `exercies/orders-vcap-services.yaml` and create
 kubectl -n cap apply -f ./credentials/orders-vcap-services.yaml
 ```
 
+## Exercise 1.4 Add User to Role Templage
+
+Add your user to the Role collection `cap-orders-kyma-rc` by navigating to the SAP BTP subaccount you are using. Within the SAP BTP cockpit open **Security -> Role Collections**. Choose `Edit`, add your user, and `Save` your changes.
+    
 ## Summary
 
-You've now ...
+You've now created in instance of the XSUAA service and created the VCAP service. Furthermore, you added your user to the generated Role Collection.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Exercise 2 PREPARE APP FOR LOCAL USE](../ex2/README.md)
 
