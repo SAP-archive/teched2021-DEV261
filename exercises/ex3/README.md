@@ -1,13 +1,13 @@
-## CONFIGURE THE SAP CICD SERVICE
+# Exercise 3 - CONFIGURE THE SAP CICD SERVICE
 
 SAP Continuous Integration and Delivery (SAP CICD) lets you configure and run predefined continuous integration and delivery (CI/CD) pipelines that automatically test, build, and deploy your code changes to speed up your development and delivery cycles. SAP CICD supports a number of different use cases including the creation of pipelines used for the development of container-based applications. This exercise will provide the necessary steps to configure and utlize a container-based applications pipeline which will deploy the CAP application into the Kyma runtime.
 
-### Open the SAP CICD service
+## Open the SAP CICD service
 
 - Within subaccount choose **Instances and Subscriptions**
 - Under Applications choose **Continuous Integration & Delivery**
 
-### CREATE THE GITHUB CREDENTIAL
+## Exercise 3.1 - CREATE THE GITHUB CREDENTIAL
 
 This process will only be required if your GitHub repo is not public. The process will include the creation of a **Personal access token** which is used as a credential to pull the code from your repo.
 
@@ -27,7 +27,7 @@ This process will only be required if your GitHub repo is not public. The proces
 - Provide the personal access token as the **Password**
 - Choose **Create**
 
-### CREATE THE DOCKER CREDENTIAL
+## Exercise 3.2 - CREATE THE DOCKER CREDENTIAL
 
 The SAP CICD service will publish a new container image each time a job is triggered. This process requires access via an access token to a container repository, in this case Docker, to push the newly built container image to the repository, This step details the process of the creation of the access token used to perform this process.
 
@@ -56,7 +56,7 @@ The SAP CICD service will publish a new container image each time a job is trigg
 - Copy the JSON structure as the **Secret**
 - Choose **Create**
 
-### CONFIGURE KUBECONFIG
+## Exercise 3.3 - CONFIGURE KUBECONFIG
 
 To apply the configurations to the Kyma cluster we will need to authenticate to the Kyma cluster using a kubeconfig. A kubeconfig can be generated using a normal user which has an expiration time or a service account which does not. A service account is configured based on the APIs and their associated verbs available within the Kyma cluster. This service account can then be used to provide a non expiring kubeconfig which will be used by the SAP CICD service to apply the updated container images and associated kubernetes resources.
 
@@ -68,7 +68,7 @@ To apply the configurations to the Kyma cluster we will need to authenticate to 
 - Copy the contents of the **tutorial-kubeconfig.yaml** into the value of the **Secret**
 - Choose **Create**
 
-### ADD THE GITHUB REPOSITORY
+## Exercise 3.4 - ADD THE GITHUB REPOSITORY
 
 This step details the process of adding the github repository container the code used to build the container images. Make sure to use your forked repository as the source.
 
@@ -84,13 +84,13 @@ This step details the process of adding the github repository container the code
 - Copy the values and adjust the **Content type**
 - Choose **Add webhook**
 
-### CREATE THE CICD JOBS
+## Exercise 3.5 - CREATE THE CICD JOBS
 
 In this step we will configure the jobs to build each piece of the application. The SAP CICD service support the use of kubectl as well as helm. In the example we will configure jobs using helm. Add a Job for each microservice.
 
 > The SAP Trial and Free tier are limited to two job configurations and one parallel build. For the exercise the creation of the job `cap-orders-service` is mandatory. The kubectl or helm commands can be used to deploy the other resources.
 
-#### CAP-ORDERS-SERVICE
+### Exercise 3.5.1 - CAP-ORDERS-SERVICE
 
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
@@ -116,7 +116,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Helm Values: **deployers/service/helm/cap-orders-service/values.yaml**
     - Force Resource Updates: **false**
 
-#### ORDERS-HTML5-DEPLOYER - OPTIONAL
+### Exercise 3.5.2 - ORDERS-HTML5-DEPLOYER - OPTIONAL
 
 > This step is optional
 
@@ -144,7 +144,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Helm Values: **deployers/html5/helm/orders-html5-deployer/values.yaml**
     - Force Resource Updates: **true**
 
-#### ORDERS-DB-DEPLOYER - OPTIONAL
+### Exercise 3.5.3 - ORDERS-DB-DEPLOYER - OPTIONAL
 
 > This step is optional
 
@@ -172,7 +172,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Helm Values: **deployers/db/helm/orders-db-deployer/values.yaml**
     - Force Resource Updates: **true**
 
-#### CAPUITOOLS - OPTIONAL
+### Exercise 3.5.4 - CAPUITOOLS - OPTIONAL
 
 > This step is optional
 
@@ -193,3 +193,9 @@ In this step we will configure the jobs to build each piece of the application. 
   - Build
 
     - Container File Path: **deployers/capui5tools/Dockerfile**
+
+## Summary
+
+You've now completed the configuration of the SAP Continuous Integration and Delivery Service.
+
+Continue to - [Exercise 4 - GENERATE TOOLS BASE IMAGE](../ex4/README.md)
