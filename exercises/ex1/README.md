@@ -19,7 +19,7 @@ Choose the tab `Credentials` and choose the Secret `cap-orders-xsuaa-binding`.
 
 Choose the option `Decode` as these decoded values will need to be copied in the next steps. 
 
-## Exercise 1.3 Apply Credentials to the Config Map
+## Exercise 1.3 Apply the Config Map
 
 Create a copy of the file `./deployers/html5/config-map.yaml` within the `credentials` directory, naming it `html5-config-map.yaml`.
 
@@ -34,26 +34,43 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
     \"URL\":\"https://cap-orders-service.{cluster domain}\"}]"
 ```
 
+Not it's time to apply the configmap to the cluster.
+```
+kubectl -n cap apply -f ./credentials/html5-config-map.yaml
 
-## Exercise 1.2 Sub Exercise 2 Description
 
-After completing these steps you will have...
+## Exercise 1.3 Create the VCAP Service
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+Open the file `./credentials/vcap_services.json` and replace the value <service key> with the Credentials value for the xsuaa property. This can be done manually or much easier using [jq](https://stedolan.github.io/jq/download/). To export the entire decoded secret using `jq` run:
+```
+kubectl get secret cap-orders-xsuaa-binding -n cap -o json | jq '.data | map_values(@base64d)'
 
+
+The result looks like this:
+```json
+{
+  "apiurl": "https://api.authentication.{region}.hana.ondemand.com",
+  "clientid": "{clientid}",
+  "clientsecret": "{clientsecret}",
+  "credential-type": "instance-secret",
+  "identityzone": "{identityzone}",
+  "identityzoneid": "{identityzoneid}",
+  "sburl": "https://internal-xsuaa.authentication.{region}.hana.ondemand.com",
+  "subaccountid": "{subaccountid}",
+  "tenantid": "{tenantid}",
+  "tenantmode": "dedicated",
+  "uaadomain": "authentication.{region}.hana.ondemand.com",
+  "url": "{url}",
+  "verificationkey": "-----BEGIN PUBLIC KEY-----{verificationkey}-----END PUBLIC KEY-----",
+  "xsappname": "{xsappname}",
+  "zoneid": "{zoneid}"
+}
 ```
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
-
+Copy the result into the `xsuaa.credentials` found in the vcap_services.json replacing the value of <service key>.
+    
+Create a secret in Kyma containing the contents of this file. 
+    
 
 ## Summary
 
