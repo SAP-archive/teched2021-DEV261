@@ -19,17 +19,25 @@ After opening the project create the folder `credentials` within the root direct
 
 # Configure Subaccount entitlements
 
-- In the Global Account choose **Entitlements** -> **Subaccount Assignments**
-- Choose your subaccount
+- In the Global Account choose **Entitlements** -> **Entity Assignments**
+- Choose your subaccount and choose **Go**
 - Choose **Configure Entitlements**
 - Choose **Add Service Plans**
 - Choose the Entitlements...
   - Entitlement: **SAP HANA Cloud** - Plan: **hana**
   - Entitlement: **SAP HANA Schemas & HDI Containers** - Plan: **hdi-shared**
   - Entitlement: **Continuous Integration & Delivery** - Plan: **default**
+  - (if not yet entitled) Entitlement: **Kyma runtime** - Plan: any available plan in the list; **trial** and **free** are not charged
+  - (if not yet entitled) Entitlement: **Launchpad Service** - Plan: **standard**
 - Choose **Save**
 
 # Kyma runtime
+
+## Provisioning
+
+> ⚠ NOTE: The creation of the instance will take some time
+
+In the Overview area of your subaccount choose the option to `Enable Kyma` runtime. If the button for enabling Kyma runtime is not showing up, ensure that the entitlement has been set correctly.
 
 ## Assignment of role collection for Kyma
 
@@ -42,7 +50,7 @@ After the enablement of Kyma runtime has finished, you need to assign yourself t
 ## Getting the Kubeconfig for CLI access and preparing Kyma runtime
 
 - In the Overview area of your subaccount open the **Console URL** found under **Kyma Environment**
-- At the top right of the window choose the user drop down and choose **Get Kubeconfig**
+- At the top right of the window choose the user drop down and choose **Get Kubeconfig**. Be aware that this kubeconfig is only valid for 8 hours.
 - Set this to an environment variable
 
 ```shell
