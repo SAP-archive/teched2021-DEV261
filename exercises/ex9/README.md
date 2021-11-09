@@ -159,4 +159,4 @@ This call is now sucessful due to the provided access token.
 Continue to - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](../ex8/README.md)
 
 
-[◀ Previous excercise](../ex8/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex10/README.md)
+[◀ Previous exercise](../ex8/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex10/README.md)

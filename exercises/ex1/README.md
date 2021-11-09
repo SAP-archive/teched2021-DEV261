@@ -107,4 +107,4 @@ Add your user to the Role collection `cap-orders-kyma-rc` by navigating to the S
 Continue to [Exercise 2 - Exercise 2 PREPARE APP FOR LOCAL USE](../ex2/README.md)
 
 
-[◀ Previous excercise](../ex0/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex2/README.md)
+[◀ Previous exercise](../ex0/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex2/README.md)

@@ -55,4 +55,4 @@ helm install orders-db-deployer ./deployers/db/helm/orders-db-deployer -n cap
 
 Continue to [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG](../ex6/README.md)
 
-[◀ Previous excercise](../ex4/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex6/README.md)
+[◀ Previous exercise](../ex4/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex6/README.md)

@@ -202,4 +202,4 @@ In this step we will configure the jobs to build each piece of the application. 
 
 Continue to [Exercise 4 - GENERATE TOOLS BASE IMAGE](../ex4/README.md)
 
-[◀ Previous excercise](../ex2/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex4/README.md)
+[◀ Previous exercise](../ex2/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex4/README.md)

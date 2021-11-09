@@ -18,4 +18,4 @@ docker push {your-docker-account}/capui5tools
 
 Continue to [Exercise 5 - GENERATE THE CAP DATABASE](../ex5/README.md)
 
-[◀ Previous excercise](../ex3/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex5/README.md)
+[◀ Previous exercise](../ex3/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex5/README.md)

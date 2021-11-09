@@ -77,4 +77,4 @@ You can check also check settings of the API rule in the Kyma console. Navigate 
 
 Continue to - [Exercise 8 - CONFIGURE LAUNCHPAD](../ex8/README.md)
 
-[◀ Previous excercise](../ex6/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex8/README.md)
+[◀ Previous exercise](../ex6/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex8/README.md)
