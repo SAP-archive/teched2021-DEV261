@@ -43,23 +43,25 @@ In the Overview area of your subaccount choose the option to `Enable Kyma` runti
 
 After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. To do so, chose `Security` -> `Users` in the menu on the left. 
 
-Choose your user and the option `Assign Role Collection`. Assign the value `KymaRuntimeNamespaceAdmin\_\_\*\*\*` to yourself
+Choose your user and the option `Assign Role Collection`. Assign the value `KymaRuntimeNamespaceAdmin__***` to yourself
 
 ## Getting the Kubeconfig for CLI access and preparing Kyma runtime
 
-- In the Overview area of your subaccount open the **Console URL** found under **Kyma Environment**
-- At the top right of the window choose the user drop down and choose **Get Kubeconfig**. Be aware that this kubeconfig is only valid for 8 hours.
-- Set this to an environment variable
+In the Overview area of your subaccount open the `Console URL` found under `Kyma Environment`. At the top right of the window choose the user drop down and choose `Get Kubeconfig`. Be aware that this kubeconfig is only valid for 8 hours.
+
+> ⚠ NOTE: If your user was just assigned to the KymaRuntimeNamespaceAdmin-Role-Collection and the Kyma console UI is rejecting access, try opening it in a private browsing window.
+
+Set the kubeconfig to an environment variable
 
 ```shell
 //mac and linux
-export KUBECONFIG=<KUBECONFIG_FILE_PATH>
+export KUBECONFIG={KUBECONFIG_FILE_PATH}
 
 //windows powershell
-$ENV:KUBECONFIG="<KUBECONFIG_FILE_PATH>"
+$ENV:KUBECONFIG="{KUBECONFIG_FILE_PATH}"
 ```
 
-- Create cap namespace in Kyma
+Afterwards, ensure that it's working by creating the required namespace in Kyma
 
 ```shell
 kubectl create ns cap
@@ -69,39 +71,31 @@ kubectl create ns cap
 
 ## Create Launchpad instance
 
-- Within subaccount choose **Service Marketplace**
-- Choose **Launchpad Service**
-- Choose **Create**
+Within your SAP BTP subaccount choose `Service Marketplace`. Select the `Launchpad Service` and choose `Create`.
 
 ## Assign Launchpad role
 
-- Assign Roles for the Launchpad Service by choosing **Security** -> **Users**
-- Choose your user
-- Choose the option **Assign Role Collection**
-- Assign the value **Launchpad_Admin** to yourself
+Assign the role for the Launchpad Service by choosing `Security` -> `Users` in the subaccount. Then choose your user and the option `Assign Role Collection`.
+
+Assign the value `Launchpad_Admin` to the user.
 
 # Cloud Foundry
 
-- In the Overview area of your subaccount choose the option to **Enabled** the Cloud Foundry Environment
-- Choose the menu option **Cloud Foundry** -> **Spaces**
-- Choose the option **Create Space**
-- Provide the name **dev** and choose **Create**
+In the Overview area of your subaccount choose the option `Enable Cloud Foundry`. This will automatically add your user as CF Org Manager.
+
+Choose the menu option `Cloud Foundry` -> `Spaces` and then the option `Create Space`. Provide the name `dev` and choose `Create`. 
 
 # Continuous Integration & Delivery
 
 ## PROVISIONING
 
-- Within subaccount choose **Service Marketplace**
-- Choose **Continuous Integration & Delivery**
-- Choose **Create**
-- Using the default options choose **Create**
+Back in the subaccount, choose `Service Marketplace`. Select `Continuous Integration & Delivery` and choose `Create`. Use the default options choose `Create`.
 
 ## ROLE ASSIGNMENT
 
-- Assign Roles for the CICD Service by choosing **Security** -> **Users**
-- Choose your user
-- Choose the option **Assign Role Collection**
-- Assign the value **CICD Service Administrator** to yourself
+Assign the role for the CICD Service by choosing `Security` -> `Users` in the subaccount. Then choose your user and the option `Assign Role Collection`.
+
+Assign the value `CICD Service Administrator to the user.
 
 # SAP HANA Cloud
 
@@ -109,18 +103,19 @@ kubectl create ns cap
 
 ## Instance creation
 
-- Open the CF **dev** space and choose **SAP HANA Cloud**
-- Choose **Create** -> **SAP HANA Database**
-- For **Type** choose **SAP HANA Cloud, SAP HANA Database**
-- Choose **Next Step**
-- Provide **teched** as the **Instance Name**
-- Provide a value for the **Administrator Password**
-- Choose **Next Step**
-- Choose **Next Step**
-- Choose **Next Step**
-- On the **SAP HANA Database Advanced Settings** choose the option **Allow all IP addresses**
-- Choose **Review and Create**
-- Choose **Create Instance**
+In the subaccount view, open `Cloud Foundry` -> `Spaces` and select the `dev` space and choose the menu item `SAP HANA Cloud`. Choose `Create -> `SAP HANA Database`.
+
+In SAP HANA Cloud Centra, select as `Type` the entry `SAP HANA Cloud, SAP HANA Database`. Choose `Next Step` at the bottom left. 
+
+Provide the following values:
+- `teched` as the `Instance Name`
+- Any value for the `Administrator Password`
+
+Chose `Next Step` and keep the default values of the next two screens by choosing `Next Step` twice. 
+
+On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP addresses` and choose `Review and Create`. 
+
+Choose `Create Instance`.
 
 ## HANA Cloud setup
 
