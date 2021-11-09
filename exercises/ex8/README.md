@@ -10,9 +10,9 @@ The goal of this excercise
 - Choose `Launchpad Service` found under `Subscriptions` and `Go to Application`
 - Choose `Create Site` and provide name `Kyma`
 - Chose the `<` at the top left to leave the site settings and navigate to Site Directory
-- In the left hand menu choose `Provider Manager` ![Icon](/images/08_01_001.png)
+- In the left hand menu choose `Provider Manager` ![Icon](/exercises/ex8/images/08_01_001.png)
   - Under `Actions` choose the refresh option
-- Choose `Conent Manager` ![Icon](/images/08_02_001.png)
+- Choose `Conent Manager` ![Icon](/exercises/ex8/images/08_02_001.png)
 - Choose **Content Explorer**
 - Choose **HTML5 Apps**
   - Select the application **Orders** and choose **Add to My Content**
