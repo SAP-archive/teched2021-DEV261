@@ -108,14 +108,14 @@ In this step we will configure the jobs to build each piece of the application. 
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
   - Build
-    - Container File Path: **deployers/service/Dockerfile**
+    - Container File Path: **resources/service/Dockerfile**
   - Release
     - Kubernetes Credentials: **kymacred**
     - Namespace: **cap**
     - Deploy Tool: **helm3**
-    - Chart Path: **deployers/service/helm/cap-orders-service**
+    - Chart Path: **resources/service/helm/cap-orders-service**
     - Deployment Name: **cap-orders-service**
-    - Helm Values: **deployers/service/helm/cap-orders-service/values.yaml**
+    - Helm Values: **resources/service/helm/cap-orders-service/values.yaml**
     - Force Resource Updates: **false**
 
 ### Exercise 3.5.2 - ORDERS-HTML5-DEPLOYER - OPTIONAL
@@ -136,14 +136,14 @@ In this step we will configure the jobs to build each piece of the application. 
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
   - Build
-    - Container File Path: **deployers/html5/Dockerfile**
+    - Container File Path: **resources/html5/Dockerfile**
   - Release
     - Kubernetes Credentials: **kymacred**
     - Namespace: **cap**
     - Deploy Tool: **helm3**
-    - Chart Path: **deployers/html5/helm/cap-html5-deployer**
+    - Chart Path: **resources/html5/helm/cap-html5-deployer**
     - Deployment Name: **orders-html5-deployer**
-    - Helm Values: **deployers/html5/helm/orders-html5-deployer/values.yaml**
+    - Helm Values: **resources/html5/helm/orders-html5-deployer/values.yaml**
     - Force Resource Updates: **true**
 
 ### Exercise 3.5.3 - ORDERS-DB-DEPLOYER - OPTIONAL
@@ -164,14 +164,14 @@ In this step we will configure the jobs to build each piece of the application. 
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
   - Build
-    - Container File Path: **deployers/db/Dockerfile**
+    - Container File Path: **resources/db/Dockerfile**
   - Release
     - Kubernetes Credentials: **kymacred**
     - Namespace: **cap**
     - Deploy Tool: **helm3**
-    - Chart Path: **deployers/db/helm/orders-db-deployer**
+    - Chart Path: **resources/db/helm/orders-db-deployer**
     - Deployment Name: **orders-db-deployer**
-    - Helm Values: **deployers/db/helm/orders-db-deployer/values.yaml**
+    - Helm Values: **resources/db/helm/orders-db-deployer/values.yaml**
     - Force Resource Updates: **true**
 
 ### Exercise 3.5.4 - CAPUITOOLS - OPTIONAL
@@ -194,7 +194,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Container Registry Credentials: **dockercred**
   - Build
 
-    - Container File Path: **deployers/capui5tools/Dockerfile**
+    - Container File Path: **resources/capui5tools/Dockerfile**
 
 ## Summary
 

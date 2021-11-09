@@ -7,7 +7,7 @@ The CAP application relies on a number of different tools which are needed to bu
 - build and push the docker image to your container repository
 
 ```shell
-docker build -t {your-docker-account}/capui5tools -f ./deployers/capui5tools/Dockerfile .
+docker build -t {your-docker-account}/capui5tools -f ./resources/capui5tools/Dockerfile .
 
 docker push {your-docker-account}/capui5tools
 ```

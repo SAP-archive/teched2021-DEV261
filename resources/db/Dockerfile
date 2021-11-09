@@ -5,7 +5,7 @@ WORKDIR /app
 # Set to production mode
 ENV NODE_ENV=production
 # Copy source
-COPY . .
+COPY components .
 # build app
 RUN ["cds", "build"]
 # Switch to db build

@@ -10,8 +10,8 @@ The goal of this excercise is to deploy the CAP service to the Kyma runtime. Thi
 
 When exposing the CAP service we want to achieve that:
 
-- The metadata of the service is accessible to all
-- The **orders** entities should require the application's **User** scope due to the definition of **srv/orders-service.cds**. This requires the use of the Destination service to provide a TokenExchange.
+- The **orders** service should require the application's **User** scope due to the definition of **srv/orders-service.cds**. This requires the use of the Destination service to provide a TokenExchange.
+- The external endpoint of the service is accessible to all
 
 The deplyoment is declaratively defined in the **deployment.yaml** file.
 
@@ -19,7 +19,7 @@ The deplyoment is declaratively defined in the **deployment.yaml** file.
 
 To achive this we first need to make sure that the Docker image that we will build is deployed to the right registry:
 
-- Open the file **/deployers/service/Dockerfile** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/service/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 Now we have three options to trigger the deployment of the service that we outline in the next sections.
@@ -28,7 +28,7 @@ Now we have three options to trigger the deployment of the service that we outli
 
 In order to trigger the deployment via the SAP CICD service execute the following steps:
 
-- Open the file **/deployers/db/helm/cap-orders-service/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/helm/cap-orders-service/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 - Commit the changes to your GitHub repository
 
@@ -36,12 +36,12 @@ In order to trigger the deployment via the SAP CICD service execute the followin
 
 In order to trigger the deployment via kubectl execute the following steps:
 
-- Open the file **/deployers/service/deployment.yaml** and replace the value of **{your-docker-account}** with your Docker account id
+- Open the file **/resources/service/deployment.yaml** and replace the value of **{your-docker-account}** with your Docker account id
 - Save the changes
 - Build and push the Docker container of your CAP service via
 
   ```shell
-  docker build -t {your-docker-account}/cap-orders-service -f ./deployers/service/Dockerfile .
+  docker build -t {your-docker-account}/cap-orders-service -f ./resources/service/Dockerfile .
 
   docker push {your-docker-account}/cap-orders-service
   ```
@@ -49,19 +49,19 @@ In order to trigger the deployment via kubectl execute the following steps:
 - Apply the **deployment.yaml** file via kubectl. This generates the _deployment_, the _service_ and the _API Rule_ in one go.
 
   ```shell
-  kubectl -n cap apply -f ./deployers/service/deployment.yaml
+  kubectl -n cap apply -f ./resources/service/deployment.yaml
   ```
 
 ## Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm
 
 In order to trigger the deployment via [Helm](https://helm.sh/) execute the following steps:
 
-- Open the file **/deployers/db/helm/cap-orders-service/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/helm/cap-orders-service/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 - Install the Helm chart via
 
   ```shell
-  helm install cap-orders-service ./deployers/db/helm/cap-orders-service -n cap
+  helm install cap-orders-service ./resources/db/helm/cap-orders-service -n cap
   ```
 
 ## Result

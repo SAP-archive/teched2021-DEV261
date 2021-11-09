@@ -3,7 +3,7 @@ FROM {your-docker-account}/capui5tools as capbuild
 # Create app directory, in which the CAP service is built
 WORKDIR /app
 # Copy source
-COPY . .
+COPY components .
 # build app
 RUN ["cds", "build"]
 
@@ -15,7 +15,6 @@ ENV NODE_ENV=production
 WORKDIR /usr/src/app
 # Copy source and service
 COPY --from=capbuild /app/gen/srv .
-COPY .cdsrc.json .
 # Install app dependencies
 RUN npm install
 # expose the port which is opened by CDS by default

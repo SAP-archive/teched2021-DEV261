@@ -10,43 +10,43 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
   - A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
   - A Kubernetes job which processes the deployemnt relying on the vcap-services credential
 
-- Open the file **/deployers/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 ## Exercise 5.1 - DEPLOYMENT OPTION 1 - SAP CICD
 
-- Open the file **/deployers/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 ## Exercise 5.2 - DEPLOYMENT OPTION 2 - kubectl
 
-- Open the file **/deployers/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 - Build and push the container to your docker account
 
   ```shell
-  docker build -t {your-docker-account}/orders-db-deployer -f ./deployers/db/Dockerfile .
+  docker build -t {your-docker-account}/orders-db-deployer -f ./resources/db/Dockerfile .
 
   docker push {your-docker-account}/orders-db-deployer
   ```
 
-- Within the the file **/deployers/db/deploy-job.yaml** adjust the value of **{your-docker-account}**
+- Within the the file **/resources/db/deploy-job.yaml** adjust the value of **{your-docker-account}**
 - Save the changes
 - Apply the job
 
   ```shell
-  kubectl -n cap replace --force -f ./deployers/db/deploy-job.yaml
+  kubectl -n cap replace --force -f ./resources/db/deploy-job.yaml
   ```
 
 ## Exercise 5.3 - DEPLOYMENT OPTION 3 - Helm
 
-- Open the file **/deployers/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 - Install the Helm chart
 
 ```shell
-helm install orders-db-deployer ./deployers/db/helm/orders-db-deployer -n cap
+helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n cap
 ```
 
 ## Summary
