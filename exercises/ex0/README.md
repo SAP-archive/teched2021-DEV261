@@ -89,6 +89,22 @@ kubectl create ns cap
 - Choose the option **Create Space**
 - Provide the name **dev** and choose **Create**
 
+# Continuous Integration & Delivery
+
+## PROVISIONING
+
+- Within subaccount choose **Service Marketplace**
+- Choose **Continuous Integration & Delivery**
+- Choose **Create**
+- Using the default options choose **Create**
+
+## ROLE ASSIGNMENT
+
+- Assign Roles for the CICD Service by choosing **Security** -> **Users**
+- Choose your user
+- Choose the option **Assign Role Collection**
+- Assign the value **CICD Service Administrator** to yourself
+
 # SAP HANA Cloud
 
 #### NOTE: The creation of the instance will take some time
