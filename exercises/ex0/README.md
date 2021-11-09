@@ -1,10 +1,23 @@
-# Configure Subaccount entitlements
+# Getting Started 
 
 ## Goal 🎯
 
-In this excercise we will ...
+In this excercise we will prepare your SAP BTP account to walk through the hands-on session. As this hands-on will combine many different SAP BTP services inside the SAP BTP, Kyma runtime, the preparation will require some time in itself.
 
 > ⚠ NOTE:Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
+
+# Fork and Clone the Repository
+
+Open the webview of the this repository. On the left hand side, choose the option `Fork` and choose your GitHub account.
+
+Once the creation of the fork is complete, clone the repo and open it in your desired editor
+```
+git clone {repo url}
+
+
+After opening the project create the folder `credentials` within the root directory of the project. This will be used to store files containing credentials which will not be tracked within your git repo.
+
+# Configure Subaccount entitlements
 
 - In the Global Account choose **Entitlements** -> **Subaccount Assignments**
 - Choose your subaccount
