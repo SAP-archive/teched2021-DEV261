@@ -76,7 +76,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
   - [Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex7#exercise-73---deployment-option-3---helm)
   
 - [Exercise 8 - CONFIGURE LAUNCHPAD](exercises/ex2/)
-- [Exercise 9 - REQUIRE OAUTH FOR THE ACTION](exercises/ex2/)
+- [Exercise 9 - REQUIRE OAUTH FOR THE ACTION](exercises/ex9/)
 - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](exercises/ex2/)
 - [Exercise 11 - MOCK APPLICATION](exercises/ex2/)
   - [Exercise 11.1 - KYMA SERVERLESS FUNCTION]()
