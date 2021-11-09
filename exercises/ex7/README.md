@@ -50,7 +50,7 @@ In order to trigger the deployment via kubectl execute the following steps:
   kubectl -n cap apply -f ./deployers/service/deployment.yaml
   ```
 
-## Exercise 7.3 - DEPLOYMENT OPTION 2 - Helm
+## Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm
 
 In order to trigger the deployment via [Helm](https://helm.sh/) execute the following steps:
 

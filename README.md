@@ -82,7 +82,8 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Exercise 7 - BUILD AND DEPLOY CAP SERVICE](exercises/ex7/)
   - [Exercise 7.1 - DEPLOYMENT OPTION 1 - SAP CICD](exercises/ex7#exercise-71---deployment-option-1---cicd-service)
   - [Exercise 7.2 - DEPLOYMENT OPTION 2 - kubectl](exercises/ex7#exercise-72---deployment-option-2---kubectl)
-  - [Exercise 7.3 - DEPLOYMENT OPTION 2 - Helm](exercises/ex7#exercise-73---deployment-option-3---helm)
+  - [Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex7#exercise-73---deployment-option-3---helm)
+  
 - [Exercise 8 - CONFIGURE LAUNCHPAD](exercises/ex2/)
 - [Exercise 9 - REQUIRE OAUTH FOR THE ACTION](exercises/ex2/)
 - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](exercises/ex2/)
