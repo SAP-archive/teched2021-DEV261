@@ -1,0 +1,73 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "orders-html5-deployer.fullname" . }}
+  labels:
+    {{- include "orders-html5-deployer.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade,pre-rollback
+    "helm.sh/hook-weight": "1"
+spec:
+  template:
+    metadata:
+      labels:
+        {{- include "orders-html5-deployer.labels" . | nindent 8 }}
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          name: {{ .Chart.Name }}
+          volumeMounts:
+            - name: html5-repo-app-host-volume
+              mountPath: "/etc/secrets/sapcp/html5-apps-repo/cap-orders-host-instance"
+              readOnly: true
+            - name: xsuaa-volume
+              mountPath: "/etc/secrets/sapcp/xsuaa/cap-orders-xsuaa-instance"
+              readOnly: true
+            - name: destination-volume
+              mountPath: "/etc/secrets/sapcp/destination/cap-orders-destination-instance"
+              readOnly: true
+          env:
+            - name: EXIT_PROCESS_AFTER_UPLOAD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configSecret.name }}
+                  key: EXIT_PROCESS_AFTER_UPLOAD
+                  optional: false
+            - name: PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configSecret.name }}
+                  key: PORT
+                  optional: false
+            - name: SAP_CLOUD_SERVICE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configSecret.name }}
+                  key: SAP_CLOUD_SERVICE
+                  optional: false
+            - name: SUBACCOUNT_LEVEL_DESTINATION
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configSecret.name }}
+                  key: SUBACCOUNT_LEVEL_DESTINATION
+                  optional: false
+            - name: BACKEND_DESTINATIONS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configSecret.name }}
+                  key: BACKEND_DESTINATIONS
+                  optional: false
+      volumes:
+        - name: html5-repo-app-host-volume
+          secret:
+            secretName: cap-orders-app-host-binding
+        - name: xsuaa-volume
+          secret:
+            secretName: cap-orders-xsuaa-binding
+        - name: destination-volume
+          secret:
+            secretName: cap-orders-destination-binding

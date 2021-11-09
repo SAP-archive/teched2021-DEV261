@@ -1,0 +1,32 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: cap-orders-xsuaa-instance
+spec:
+  clusterServiceClassExternalName: xsuaa
+  clusterServicePlanExternalName: application
+  parameters:
+    xsappname: cap-orders-kyma
+    tenant-mode: dedicated
+    scopes:
+      - name: $XSAPPNAME.User
+        description: user role
+    role-templates:
+      - name: User
+        description: cap-orders-kyma
+        scope-references:
+          - $XSAPPNAME.User
+    role-collections:
+      - name: cap-orders-kyma-rc
+        description: Kyma CAP Sample
+        role-template-references:
+          - $XSAPPNAME.User
+
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: cap-orders-xsuaa-binding
+spec:
+  instanceRef:
+    name: cap-orders-xsuaa-instance

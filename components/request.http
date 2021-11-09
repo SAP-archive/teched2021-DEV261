@@ -1,0 +1,62 @@
+### Request to fetch OAuth for the Action
+# @name auth
+POST https://oauth2.<cluster url>/oauth2/token
+Content-type: application/x-www-form-urlencoded
+Authorization: Basic <YOUR_CLIENT_ID>:<YOUR_CLIENT_SECRET>
+
+grant_type=client_credentials
+&scope=submitexternalorder
+
+
+### Call the OAuth secured service to submit an order
+POST https://cap-orders-service.<cluster url>/external/submitorder 
+Content-type: application/json 
+Authorization: Bearer {{auth.response.body.access_token}}
+
+{
+    "orderNo": "123123"
+}
+
+---
+
+### Call mocked service (Cloud Connection) to submit an order - Step 1
+POST http://localhost:3000/orders
+Content-type: application/json
+
+{
+    "orderNo": 123123
+}
+
+### Call mocked service (Cloud Connection) to submit an order - Step 2
+POST http://localhost:4004/external/submitorder 
+Content-type: application/json
+ 
+{
+    "orderNo": 123123
+}
+
+### Call mocked service (Cloud Connection) to submit an order - Step 3
+POST https://cap-orders-service.<cluster url>/external/submitorder
+Content-type: application/json
+ 
+{
+     "orderNo": 123123
+}
+
+---
+
+### Call mocked service (Kyma Function) to submit an order - Step 1
+POST https://order-mock.<cluster url>/orders 
+Content-Type: application/json
+
+{
+    "orderNo": 123123
+}
+
+### Call mocked service (Kyma Function) to submit an order - Step 2
+POST http://localhost:4004/external/submitorder
+Content-Type: application/json
+
+{
+    "orderNo": 123123
+}

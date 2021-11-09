@@ -1,0 +1,16 @@
+apiVersion: serverless.kyma-project.io/v1alpha1
+kind: Function
+metadata:
+  name: order-mock
+spec:
+  deps: "{ \n  \"name\": \"order-mock\",\n  \"version\": \"1.0.0\",\n  \"dependencies\":
+    {\n    \"random-words\": \"^1.1.1\"\n  }\n}"
+  runtime: nodejs14
+  source: "const randomWords = require(\"random-words\");\n\nmodule.exports = { \n
+    \ main: function (event, context) {\n    return {\n      OrderNo: (event.data.orderNo
+    || 1).toString(),\n      createdBy: \"Internal Inc.\",\n      buyer: \"The Buyer
+    Co.\",\n      currency: { code: \"EUR\" },\n      Items: [\n        {\n          product_ID:
+    getRandomInt(1000, 1000000).toString(),\n          quantity: getRandomInt(1, 10),\n
+    \         title: randomWords(),\n          price: getRandomInt(10, 20),\n        },\n
+    \     ],\n    };\n  }\n}\n\nfunction getRandomInt(min, max) {\n  min = Math.ceil(min);\n
+    \ max = Math.floor(max);\n  return Math.floor(Math.random() * (max - min) + min);\n}"

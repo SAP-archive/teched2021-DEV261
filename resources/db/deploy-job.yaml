@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: orders-db-deployer
+  labels:
+    app: orders-db-deployer
+spec:
+  ttlSecondsAfterFinished: 10
+  template:
+    metadata:
+      labels:
+        app: orders-db-deployer
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - image: {your-docker-account}/orders-db-deployer:latest
+          imagePullPolicy: Always
+          name: cap-db-deployer
+          envFrom:
+          - secretRef:
+              name: orders-vcap-services

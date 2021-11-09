@@ -1,0 +1,21 @@
+{
+    "[development]": {
+        "auth": {
+            "passport": {
+                "strategy": "mock",
+                "users": {
+                    "kyma@cap.sap.com": {
+                        "password": "initial",
+                        "ID": "kyma@cap.sap.com",
+                        "userAttributes": {
+                            "email": "kyma@cap.sap.com"
+                        },
+                        "roles": [
+                            "User"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<mvc:View
+	controllerName="com.cap.kyma.orders.controller.Object"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic">
+
+	<semantic:SemanticPage
+		id="page"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:titleHeading>
+			<Title text="{OrderNo}" />
+		</semantic:titleHeading>
+
+		<semantic:headerContent>
+			<ObjectNumber
+				unit="{createdBy}"
+			/>
+		</semantic:headerContent>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+		</semantic:sendEmailAction>
+
+		<semantic:content>
+			<List
+				items="{Items}"
+				headerText="Products">
+				<ObjectListItem
+					title="{product_ID}"
+					type="Active"
+					number="{
+						path:'price'
+					}">
+					<ObjectAttribute title="{i18n>productTitle}" text="{title}"/>
+					<ObjectAttribute title="{i18n>price}" text="{price}"/>
+					<ObjectAttribute title="{i18n>quantity}" text="{quantity}"/>
+				</ObjectListItem>
+			</List>
+        </semantic:content>
+
+
+	</semantic:SemanticPage>
+
+</mvc:View>

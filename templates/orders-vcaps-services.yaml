@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: orders-vcap-services
+type: Opaque
+data:
+  VCAP_SERVICES: <base64 encoded vcap_services>

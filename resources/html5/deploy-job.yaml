@@ -1,0 +1,71 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: orders-html5-deployer
+  labels:
+    app: orders-html5-deployer
+spec:
+  ttlSecondsAfterFinished: 10
+  template:
+    metadata:
+      labels:
+        app: orders-html5-deployer
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - image: {your-docker-account}/orders-html5-deployer:latest
+          imagePullPolicy: Always
+          name: orders-html5-deployer
+          volumeMounts:
+            - name: html5-repo-app-host-volume
+              mountPath: "/etc/secrets/sapcp/html5-apps-repo/cap-orders-host-instance"
+              readOnly: true
+            - name: xsuaa-volume
+              mountPath: "/etc/secrets/sapcp/xsuaa/cap-orders-xsuaa-instance"
+              readOnly: true
+            - name: destination-volume
+              mountPath: "/etc/secrets/sapcp/destination/cap-orders-destination-instance"
+              readOnly: true
+          env:
+            - name: EXIT_PROCESS_AFTER_UPLOAD
+              valueFrom:
+                secretKeyRef:
+                  name: orders-html5-deployer-secret
+                  key: EXIT_PROCESS_AFTER_UPLOAD
+                  optional: false
+            - name: PORT
+              valueFrom:
+                secretKeyRef:
+                  name: orders-html5-deployer-secret
+                  key: PORT
+                  optional: false
+            - name: SAP_CLOUD_SERVICE
+              valueFrom:
+                secretKeyRef:
+                  name: orders-html5-deployer-secret
+                  key: SAP_CLOUD_SERVICE
+                  optional: false
+            - name: SUBACCOUNT_LEVEL_DESTINATION
+              valueFrom:
+                secretKeyRef:
+                  name: orders-html5-deployer-secret
+                  key: SUBACCOUNT_LEVEL_DESTINATION
+                  optional: false
+            - name: BACKEND_DESTINATIONS
+              valueFrom:
+                secretKeyRef:
+                  name: orders-html5-deployer-secret
+                  key: BACKEND_DESTINATIONS
+                  optional: false
+      volumes:
+        - name: html5-repo-app-host-volume
+          secret:
+            secretName: cap-orders-app-host-binding
+        - name: xsuaa-volume
+          secret:
+            secretName: cap-orders-xsuaa-binding
+        - name: destination-volume
+          secret:
+            secretName: cap-orders-destination-binding

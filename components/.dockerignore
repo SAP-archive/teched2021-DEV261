@@ -1,0 +1,13 @@
+**/.DS_Store
+**/vcap_services.json
+**/vcap.json
+**/package-lock.json
+**/*.mtar
+**/*.md
+**/node_modules
+**/samples
+
+**/deploy*.yaml
+**/sap-ui-version.json
+# Uncomment if you do not want to seed the database
+# **/*.csv
