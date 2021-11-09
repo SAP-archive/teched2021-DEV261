@@ -2,9 +2,9 @@
 
 ## Goal 🎯
 
-As of now the the action **submitexternalorder** is set for no authentication. This is determined by the definition found in the file **srv/orders-service.cds**.
+As of now the the action **submitexternalorder**, exposed by the cap service using the path `/external`, is exposed without requiring authentication. This is determined by the definition found in the file **components/srv/orders-service.cds**.
 
-The goal of this exercise is to reconfigure the API rule so that a authentication via OAuth2 is necessary. In addition will leverage the OAuth2 client functionality delivered with Kyma to authenticate a requests to this action.
+The goal of this exercise is to reconfigure the API rule so that authentication via OAuth2 is necessary. This will be accomplished by leveraging the OAuth2 functionality delivered with Kyma.
 
 ## API Rule with OAuth2
 
@@ -94,7 +94,7 @@ After the creation you will be forewarded to the overview screen of the newly cr
 
 ![Kyma Copy Secrets](./images/kyma_OAuth_Step3.png)
 
-To get a vlaid token for the call to the endpoint of the **submitorder** action we must first retrive the token making use of the credentials we have just copied. To be able to do so we must first _encode_ them in base64 in the format `<client id>:<client secret> `.
+To get a valid token for the call to the endpoint of the **submitorder** action we must first retrive the token making use of the credentials we have just copied. To be able to do so we must first _encode_ them in base64 in the format `<client id>:<client secret> `.
 
 You have the following options to do the encoding:
 
@@ -137,7 +137,7 @@ This will return a value like:
 {"access_token":"HepyeseeOK1e33KymadaoKHtMmPllisa6CMACW0PjjSjQc.oZ08v_9gvNM17CoolSL3lFlYcX8z-HT7i7cG_rq1vapGGk","expires_in":3599,"scope":"submitexternalorder","token_type":"bearer"}%
 ```
 
-Copy the value of the **access_token** as this will be needed in the call to the **submitorder** endpoint. Let's do that:
+Copy the value of the **access_token** as this will be needed in the call to the **external/submitorder** endpoint. Let's do that:
 
 - In shell
 
@@ -151,7 +151,7 @@ Copy the value of the **access_token** as this will be needed in the call to the
   curl.exe '-X' 'POST' 'https://cap-orders-service.<cluster url>/external/submitorder' '-H' 'Content-Type: application/json' '-H' 'Authorization: Bearer <access_token>' '-d' '{\"orderNo\": 123123}'
   ```
 
-This call is now sucessful due to the provided access token.
+This call is now sucessfully authenticated due to the provided access token, but will fail with the error `an error occurred...`. This occurrs due to the **MOCK_HOST** of the **components/src/orders-service.js** not being defined. Utlizing the logs you will also find that the call to the **Alert Notification** service fails too. This will be resolved in the next exercises.
 
 ## Summary
 
