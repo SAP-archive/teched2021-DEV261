@@ -42,7 +42,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
 - [Getting Started](exercises/ex0/)
-  - [FORK AND CLONE REPO](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#configure-subaccount-entitlements)
+  - [FORK AND CLONE REPO](exercises/ex0/README.md#fork-and-clone-the-repository)
   - [SAP BTP SUBACCOUNT CONFIGURATION](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#kyma-runtime)
   - [SAP KYMA RUNTIME](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#launchpad-service)
     - [PROVISIONING](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#launchpad-service)
