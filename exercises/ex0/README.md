@@ -136,7 +136,7 @@ This means, the vcap_services.json will look like this:
     "name": "cpapp",
         "label": "xsuaa",
         "tags": ["xsuaa"],
-        "credentials":  {service key} ,
+        "credentials":  <service key> ,
   }],
   "hana": [
     {
@@ -145,7 +145,7 @@ This means, the vcap_services.json will look like this:
         "host": {host},
         "port": "443",
         "driver": "com.sap.db.jdbc.Driver",
-        "url": "{url},
+        "url": {url},
         "schema": {schema},
         "hdi_user": {hdi_user},
         "hdi_password": {hdi_password},
