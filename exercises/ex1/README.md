@@ -97,5 +97,5 @@ You've now created in instance of the XSUAA service and created the VCAP service
 Continue to - [Exercise 2 - Exercise 2 PREPARE APP FOR LOCAL USE](../ex2/README.md)
 
 
-[◀ Previous excercise](../ex0/README.md) | [🔼 Overview](../README.md) | [Next excercise ▶](../ex2/README.md)
+[◀ Previous excercise](../ex0/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex2/README.md)
 

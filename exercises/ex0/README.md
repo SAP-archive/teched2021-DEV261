@@ -104,4 +104,4 @@ kubectl create ns cap
 Now that you have setup everything Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
 
 
-[🔼 Overview](../README.md) | [Next excercise ▶](../ex1/README.md)
+[🔼 Overview](../../README.md) | [Next excercise ▶](../ex1/README.md)
