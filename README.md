@@ -10,13 +10,20 @@ This repository contains the material for the SAP TechEd 2021 session called DEV
 
 This session introduces attendees to making use of the advantages that come along with Kubernetes in the context of their SAP BTP projects. SAP BTP, Kyma runtime is the fully managed Kubernetes runtime based on the open-source project "Kyma". This cloud-native solution allows the developers to extend SAP solutions with serverless Functions and combine them with containerized microservices. The offered functionality ensures smooth consumption of SAP and non-SAP applications, running workloads in a highly scalable environment, and building event- and API-based extensions.
 
-During this session, you will learn how to make use of SAP BTP services in the context of a Kyma-based project. You will see how to
+During this session, you will learn how to make use of SAP BTP services in the context of a Kyma-based project.  
 
-- setup your continous integration and delivery pipeline using "[SAP Continuous Integration and Delivery](https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery)" for deploying a CAP application. This application will also make use of the services:
-  - [SAP Launchpad service](https://discovery-center.cloud.sap/serviceCatalog/launchpad-service),
-  - [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud)
-  - [SAP Alert Notification](https://discovery-center.cloud.sap/serviceCatalog/alert-notification)
-  - [SAP HTML5 Application Repository](https://discovery-center.cloud.sap/serviceCatalog/html5-application-repository-service)
+This application will also make use of the services:
+
+- [SAP Launchpad service](https://discovery-center.cloud.sap/serviceCatalog/launchpad-service),
+- [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud)
+- [SAP Alert Notification](https://discovery-center.cloud.sap/serviceCatalog/alert-notification)
+- [SAP HTML5 Application Repository](https://discovery-center.cloud.sap/serviceCatalog/html5-application-repository-service)
+
+The overall solution will finally look like this:
+
+![Solution Diagram](./assets/solution-diagram.png)
+
+You will also see how to setup your continous integration and delivery pipeline using "[SAP Continuous Integration and Delivery](https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery)" for deploying a CAP application.
 
 ## Requirements
 
