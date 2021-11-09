@@ -53,3 +53,6 @@ helm install orders-html5-deployer ./deployers/db/helm/orders-html5-deployer -n 
 ```
 
 Continue to - [Exercise 7 - BUILD AND DEPLOY CAP SERVICE](../ex7/README.md)
+
+
+[◀ Previous excercise](../ex5/README.md) | [🔼 Overview](../README.md) | [Next excercise ▶](../ex7/README.md)

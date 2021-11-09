@@ -199,3 +199,5 @@ In this step we will configure the jobs to build each piece of the application. 
 You've now completed the configuration of the SAP Continuous Integration and Delivery Service.
 
 Continue to - [Exercise 4 - GENERATE TOOLS BASE IMAGE](../ex4/README.md)
+
+[◀ Previous excercise](../ex2/README.md) | [🔼 Overview](../README.md) | [Next excercise ▶](../ex4/README.md)
