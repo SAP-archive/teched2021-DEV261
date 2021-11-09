@@ -4,7 +4,7 @@
 
 In this excercise we will prepare your SAP BTP account to walk through the hands-on session. As this hands-on will combine many different SAP BTP services inside the SAP BTP, Kyma runtime, the preparation will require some time in itself.
 
-> ⚠ NOTE:Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
+> ⚠ NOTE: Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
 
 # Fork and Clone the Repository
 
@@ -19,17 +19,17 @@ After opening the project create the folder `credentials` within the root direct
 
 # Configure Subaccount entitlements
 
-- In the Global Account choose **Entitlements** -> **Entity Assignments**
-- Choose your subaccount and choose **Go**
-- Choose **Configure Entitlements**
-- Choose **Add Service Plans**
-- Choose the Entitlements...
-  - Entitlement: **SAP HANA Cloud** - Plan: **hana**
-  - Entitlement: **SAP HANA Schemas & HDI Containers** - Plan: **hdi-shared**
-  - Entitlement: **Continuous Integration & Delivery** - Plan: **default**
-  - (if not yet entitled) Entitlement: **Kyma runtime** - Plan: any available plan in the list; **trial** and **free** are not charged
-  - (if not yet entitled) Entitlement: **Launchpad Service** - Plan: **standard**
-- Choose **Save**
+In the SAP BTP global account choose `Entitlements` -> `Entity Assignments`. Choose your subaccount and choose `Go`. This will list all assigned entitlements. 
+
+Choose `Configure Entitlements` and `Add Service Plans` to select additional entitlements. 
+
+In the pop-up, choose the entitlements...
+  - Entitlement: `SAP HANA Cloud` - Plan: `hana`
+  - Entitlement: `SAP HANA Schemas & HDI Containers` - Plan: `hdi-shared`
+  - Entitlement: `Continuous Integration & Delivery` - Plan: any available plan in the list; `trial` and `free` are not charged
+  - (if not yet entitled) Entitlement: `Kyma runtime` - Plan: any available plan in the list; `trial` and `free` are not charged
+  - (if not yet entitled) Entitlement: `Launchpad Service` - Plan: `standard`
+- Choose `Add x Service Plans` and then `Save`
 
 # Kyma runtime
 
@@ -41,11 +41,9 @@ In the Overview area of your subaccount choose the option to `Enable Kyma` runti
 
 ## Assignment of role collection for Kyma
 
-After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. 
-- In the menu on the left, chose **Security** -> **Users**
-- Choose your user
-- Choose the option **Assign Role Collection**
-- Assign the value **KymaRuntimeNamespaceAdmin\_\_\*\*\*** to yourself
+After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. To do so, chose `Security` -> `Users` in the menu on the left. 
+
+Choose your user and the option `Assign Role Collection`. Assign the value `KymaRuntimeNamespaceAdmin\_\_\*\*\*` to yourself
 
 ## Getting the Kubeconfig for CLI access and preparing Kyma runtime
 
