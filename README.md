@@ -43,11 +43,8 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 
 - [Getting Started](exercises/ex0/)
   - [FORK AND CLONE REPO](exercises/ex0/README.md#fork-and-clone-the-repository)
-  - [SAP BTP SUBACCOUNT CONFIGURATION](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#kyma-runtime)
-  - [SAP KYMA RUNTIME](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#launchpad-service)
-    - [PROVISIONING](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#launchpad-service)
-    - [ROLE ASSIGNMENT](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#cloud-foundry)
-    - [KUBECTL CONFIGURATION](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
+  - [SAP BTP SUBACCOUNT CONFIGURATION](exercises/ex0/README.md#configure-subaccount-entitlements)
+  - [SAP KYMA RUNTIME](exercises/ex0/README.md#kyma-runtime)
   - [SAP LAUNCHPAD SERVICES](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
     - [PROVISIONING](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
     - [ROLE ASSIGNMENT](https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#sap-hana-cloud)
