@@ -117,25 +117,59 @@ On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP add
 
 Choose `Create Instance`.
 
-## HANA Cloud setup
+## Setup
 
-- Within subaccount choose **Service Marketplace**
-- Choose **SAP HANA Schemas & HDI Containers**
-- Choose **Create** with the options
-  - Plan: **hdi-shared**
-  - Instance Name: **cap-orders-kyma**
-- Choose **Create**
-- Choose the option **View Instance**
-- Once the instance is created,open the instance and choose the option **Create** under **Service Keys**
-  - Service Key Name: **kyma**
-- Choose **Create**
-- Once created choose the option **View Credentials**
-- Copy the Credentials
-- Within the project root open the file **vcap_services.json** and replace the value `<service key>` with the Credentials value for the **hana** property
+Within your SAP BTP subaccount choose `Service Marketplace` and select `SAP HANA Schemas & HDI Containers`. Choose `Create` with the options
+- Plan: `hdi-shared`
+- Instance Name: `cap-orders-kyma`
+
+Choose `Create` and select the option `View Instance`. Once the instance is created, open the instance and choose the option `Create` under `Service Keys`. Provide the service Key Name `kyma` and choose `Create`.
+
+Once created choose the option `View` and copy the credentials. 
+
+Within the project open the file `exercies/vcap_services.json` and create a copy of it saving it into the `credentials` directory of the project. Open the file `credentials/vcap_services.json` and replace the value `<service key>` of `hana.credentials` with the Credentials value for the SAP HANA property.
+
+This means, the vcap_services.json will look like this:
+```json
+{
+  "xsuaa":[{
+    "name": "cpapp",
+        "label": "xsuaa",
+        "tags": ["xsuaa"],
+        "credentials":  <service key> ,
+  }],
+  "hana": [
+    {
+      "binding_name": null,
+      "credentials":  {
+        "host": {host},
+        "port": "443",
+        "driver": "com.sap.db.jdbc.Driver",
+        "url": "{url},
+        "schema": {schema},
+        "hdi_user": {hdi_user},
+        "hdi_password": {hdi_password},
+        "user": {user},
+        "password": {password},
+        "certificate": "-----BEGIN CERTIFICATE-----{certificate}-----END CERTIFICATE-----"
+      } ,
+      "instance_name": "cpapp",
+      "label": "cpapp",
+      "name": "cpapp",
+      "plan": "hdi-shared",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": ["hana", "database", "relational"],
+      "volume_mounts": []
+    }
+  ]
+}
+```
+
 
 ## Summary
 
-Now that you have setup everything Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Now you have setup all service instances and started preparing the VCAP service deployment. It's time to continue with - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
 
 
 [🔼 Overview](../../README.md) | [Next excercise ▶](../ex1/README.md)
