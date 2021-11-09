@@ -10,7 +10,7 @@ This repository contains the material for the SAP TechEd 2021 session called DEV
 
 This session introduces attendees to making use of the advantages that come along with Kubernetes in the context of their SAP BTP projects. SAP BTP, Kyma runtime is the fully managed Kubernetes runtime based on the open-source project "Kyma". This cloud-native solution allows the developers to extend SAP solutions with serverless Functions and combine them with containerized microservices. The offered functionality ensures smooth consumption of SAP and non-SAP applications, running workloads in a highly scalable environment, and building event- and API-based extensions.
 
-During this session, you will learn how to make use of SAP BTP services in the context of a Kyma-based project.  
+During this session, you will learn how to make use of SAP BTP services in the context of a Kyma-based project.
 
 This application will also make use of the services:
 
@@ -74,12 +74,10 @@ Provide the exercise content here directly in README.md using [markdown](https:/
   - [Exercise 7.1 - DEPLOYMENT OPTION 1 - SAP CICD](exercises/ex7#exercise-71---deployment-option-1---cicd-service)
   - [Exercise 7.2 - DEPLOYMENT OPTION 2 - kubectl](exercises/ex7#exercise-72---deployment-option-2---kubectl)
   - [Exercise 7.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex7#exercise-73---deployment-option-3---helm)
-  
-- [Exercise 8 - CONFIGURE LAUNCHPAD](exercises/ex2/)
+- [Exercise 8 - CONFIGURE LAUNCHPAD](exercises/ex8/)
 - [Exercise 9 - REQUIRE OAUTH FOR THE ACTION](exercises/ex9/)
-- [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](exercises/ex2/)
-- [Exercise 11 - MOCK APPLICATION](exercises/ex2/)
-  - [Exercise 11.1 - KYMA SERVERLESS FUNCTION]()
+- [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](exercises/ex10/)
+- [Exercise 11 - MOCK APPLICATION](exercises/ex11/)
 
 ## How to obtain support
 

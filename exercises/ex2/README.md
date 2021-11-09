@@ -1,45 +1,69 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 2 - PREPARE APP FOR LOCAL USE]
 
 ## Goal 🎯
 
-In this exercise, we will create...
+This exercise provides the commands to run the sample application locally. This is provided for informational purposes and is not needed to proceed with the exercise.
 
-## Exercise 2.1 Sub Exercise 1 Description
+## Install the application dependencies
 
-After completing these steps you will have created...
+Install the CDS tools
 
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
-
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
+```shell
+npm i -g @sap/cds-dk
 ```
 
+Install the app dependencies
 
+```shell
+npm install --prefix components
+```
 
-## Exercise 2.2 Sub Exercise 2 Description
+The app can be run using the command
 
-After completing these steps you will have...
+```shell
+cds watch components
+```
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
+The application is set to use a mock user. The relating user details are defined in **components/.cdsrc.json** as `kyma@cap.sap.com/initial`. This will not work if the **NODE_ENV** has been set to production.
+
+## REQUIRES THE COMPLETION OF [Exercise 5 - GENERATE THE CAP DATABASE](../ex5/README.md)
+
+The application can also be configured to connect to the HANA Cloud instance. This first requires that the database has been fully setup which is performed in Exercise 5.
+
+First set the VCAP_SERVICES environment variable
+
+- Using shell
+
+  ```shell
+  export VCAP_SERVICES=$(<credentials/vcap_services.json)
+  ```
+
+- Using PowerShell
+
+  ```powershell
+  $ENV:VCAP_SERVICES = Get-Content .\vcap_services.json -Raw
+  ```
+
+If necessary change the setting of the property **cds.requires.db.kind** within the **components/package.json** from `sql` to `hana`
+
+```json
+"cds": {
+    "requires": {
+      "db": {
+        "kind": "hana"
+      },
 
 ```
 
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
+Then execute:
+
+```shell
+cds watch components
+```
 
 ## Summary
 
-🎉 Congratulations - You've now ...
+🎉 Congratulations - You now can run the application locally.
 
 Continue to [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](../ex3/README.md)
 
