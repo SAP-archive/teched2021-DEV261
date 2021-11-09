@@ -13,7 +13,7 @@ Open the webview of the this repository. On the left hand side, choose the optio
 Once the creation of the fork is complete, clone the repo and open it in your desired editor
 ```
 git clone {repo url}
-
+```
 
 After opening the project create the folder `credentials` within the root directory of the project. This will be used to store files containing credentials which will not be tracked within your git repo.
 
