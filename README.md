@@ -1,6 +1,6 @@
 # DEV261 - Build Extensions with SAP BTP, Kyma Runtime
 
-<img src="kyma-runtime.svg" width="300">
+<img src="./assets/kyma-runtime.svg" width="300">
 
 ## Description
 
