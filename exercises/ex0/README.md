@@ -136,7 +136,7 @@ This means, the vcap_services.json will look like this:
     "name": "cpapp",
         "label": "xsuaa",
         "tags": ["xsuaa"],
-        "credentials":  <service key> ,
+        "credentials":  {service key} ,
   }],
   "hana": [
     {
