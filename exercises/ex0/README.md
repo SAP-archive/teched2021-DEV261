@@ -169,7 +169,7 @@ This means, the vcap_services.json will look like this:
 
 ## Summary
 
-Now you have setup all service instances and started preparing the VCAP service deployment. It's time to continue with - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+🎉 Congratulations - Now you have setup all service instances and started preparing the VCAP service deployment. It's time to continue with - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
 
 
 [🔼 Overview](../../README.md) | [Next excercise ▶](../ex1/README.md)
