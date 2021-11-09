@@ -47,7 +47,7 @@ Provide the exercise content here directly in README.md using [markdown](https:/
   - [SAP KYMA RUNTIME](exercises/ex0/README.md#kyma-runtime)
   - [SAP LAUNCHPAD SERVICES](exercises/ex0/README.md#launchpad-service)
   - [SAP CLOUD FOUNDRY CONFIGURATION](exercises/ex0/README.md#cloud-foundry)
-  - [SAP CICD SERVICE](exercises/ex0/README.md#continuous-integration--delivery)
+  - [SAP CONTINUOUS INTEGRATION & DELIVERY SERVICE](exercises/ex0/README.md#continuous-integration--delivery)
   - [SAP HANA CLOUD](exercises/ex0/README.md#sap-hana-cloud)
 - [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/)
 - [Exercise 2 - PREPARE APP FOR LOCAL USE](exercises/ex2/)
