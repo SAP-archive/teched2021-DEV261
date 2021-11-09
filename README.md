@@ -14,7 +14,7 @@ During this session, you will learn how to make use of SAP BTP services in the c
 
 This application will also make use of the services:
 
-- [SAP Launchpad service](https://discovery-center.cloud.sap/serviceCatalog/launchpad-service),
+- [SAP Launchpad service](https://discovery-center.cloud.sap/serviceCatalog/launchpad-service)
 - [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/sap-hana-cloud)
 - [SAP Alert Notification](https://discovery-center.cloud.sap/serviceCatalog/alert-notification)
 - [SAP HTML5 Application Repository](https://discovery-center.cloud.sap/serviceCatalog/html5-application-repository-service)
