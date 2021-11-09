@@ -1,5 +1,7 @@
 # Exercise 2 - Exercise 2 Description
 
+## Goal 🎯
+
 In this exercise, we will create...
 
 ## Exercise 2.1 Sub Exercise 1 Description
@@ -37,8 +39,8 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 
 ## Summary
 
-You've now ...
+🎉 Congratulations - You've now ...
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+Continue to [Exercise 3 - Excercise 3 ](../ex3/README.md)
 
 [◀ Previous excercise](../ex1/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex3/README.md)

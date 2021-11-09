@@ -1,5 +1,7 @@
 # Exercise 1 - XSUAA Service Instance
 
+## Goal 🎯
+
 In this exercise, we will create and configure an instance of the "Authorization and Trust Management" service within SAP BTP, Kyma runtime. With that service instance, you will generate a Role Collection inside the SAP BTP subaccount which will controle the access to the later CAP application.
 
 ## Exercise 1.1 Create the XSUAA Service Instance
@@ -100,8 +102,9 @@ Add your user to the Role collection `cap-orders-kyma-rc` by navigating to the S
 
 ## Summary
 
-You've now created in instance of the XSUAA service and created the VCAP service. Furthermore, you added your user to the generated Role Collection.
+🎉 Congratulations - You've now created in instance of the XSUAA service and created the VCAP service. Furthermore, you added your user to the generated Role Collection.
 
-Continue to - [Exercise 2 - Exercise 2 PREPARE APP FOR LOCAL USE](../ex2/README.md)
+Continue to [Exercise 2 - Exercise 2 PREPARE APP FOR LOCAL USE](../ex2/README.md)
+
 
 [◀ Previous excercise](../ex0/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex2/README.md)

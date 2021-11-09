@@ -1,5 +1,7 @@
 # Exercise 5 - GENERATE THE CAP DATABASE
 
+## Goal 🎯
+
 This process will deploy the CAP application database into the SAP HANA Cloud. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
 - The structure of the database is defined within the file **/db/schema.cds** and the associated data which will be inserted into the database can be found at **db/data**.
@@ -47,6 +49,10 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 helm install orders-db-deployer ./deployers/db/helm/orders-db-deployer -n cap
 ```
 
-Continue to - [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG](../ex6/README.md)
+## Summary
+
+🎉 Congratulations - You've now ...
+
+Continue to [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG](../ex6/README.md)
 
 [◀ Previous excercise](../ex4/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex6/README.md)

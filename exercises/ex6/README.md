@@ -1,5 +1,7 @@
 # Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG
 
+## Goal 🎯
+
 In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Additionally the BACKEND_DESTINATION to the service will be deployed. This step requires a few service instances to be generated which are defined within **service-instances.yaml**.
 
 > ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directory. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-map.yaml**
@@ -51,8 +53,11 @@ In the step we will deploy the static HTML5 application to the **HTML5 Applicati
 ```shell
 helm install orders-html5-deployer ./deployers/db/helm/orders-html5-deployer -n cap
 ```
+## Summary
 
-Continue to - [Exercise 7 - BUILD AND DEPLOY CAP SERVICE](../ex7/README.md)
+🎉 Congratulations - You've now ...
+
+Continue to [Exercise 7 - BUILD AND DEPLOY CAP SERVICE](../ex7/README.md)
 
 
 [◀ Previous excercise](../ex5/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex7/README.md)

@@ -1,6 +1,10 @@
 # Configure Subaccount entitlements
 
-#### NOTE: Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
+## Goal 🎯
+
+In this excercise we will ...
+
+> ⚠ NOTE:Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add ther serve
 
 - In the Global Account choose **Entitlements** -> **Subaccount Assignments**
 - Choose your subaccount

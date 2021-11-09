@@ -1,5 +1,7 @@
 # Exercise 3 - CONFIGURE THE SAP CICD SERVICE
 
+## Goal 🎯
+
 SAP Continuous Integration and Delivery (SAP CICD) lets you configure and run predefined continuous integration and delivery (CI/CD) pipelines that automatically test, build, and deploy your code changes to speed up your development and delivery cycles. SAP CICD supports a number of different use cases including the creation of pipelines used for the development of container-based applications. This exercise will provide the necessary steps to configure and utlize a container-based applications pipeline which will deploy the CAP application into the Kyma runtime.
 
 ## Open the SAP CICD service
@@ -196,8 +198,8 @@ In this step we will configure the jobs to build each piece of the application. 
 
 ## Summary
 
-You've now completed the configuration of the SAP Continuous Integration and Delivery Service.
+🎉 Congratulations - You've now completed the configuration of the SAP Continuous Integration and Delivery Service.
 
-Continue to - [Exercise 4 - GENERATE TOOLS BASE IMAGE](../ex4/README.md)
+Continue to [Exercise 4 - GENERATE TOOLS BASE IMAGE](../ex4/README.md)
 
 [◀ Previous excercise](../ex2/README.md) | [🔼 Overview](../../README.md) | [Next excercise ▶](../ex4/README.md)
