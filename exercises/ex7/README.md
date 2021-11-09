@@ -1,5 +1,7 @@
 # Exercise 7 - BUILD AND DEPLOY CAP SERVICE
 
+## Goal 🎯
+
 The goal of this excercise is to deploy the CAP service to the Kyma runtime. This comprises three parts:
 
 - A [*deployment*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) of the CAP service as a pod in Kyma
@@ -69,6 +71,9 @@ The service will be accessible now via the url **https://cap-orders-service.\<cl
 You can check also check settings of the API rule in the Kyma console. Navigate to the cap namespace. From there goto the `Discovery and Network -> API Rules` The rule has the name **cap-orders-service**
 ![Kyma Console - API Rules](/exercises/ex7/images/kymaconsole_apirules.png)
 
+## Summary
+
+🎉 Congratulations - You've now successfully deployed the CAP service to Kyma and exposed it via an API rule.
 
 Continue to - [Exercise 8 - CONFIGURE LAUNCHPAD](../ex8/README.md)
 
