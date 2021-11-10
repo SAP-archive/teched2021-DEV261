@@ -10,10 +10,10 @@ The goal of this excercise is to deploy the CAP service to the Kyma runtime. Thi
 
 When exposing the CAP service we want to achieve that:
 
-- The **orders** service should require the application's **User** scope due to the definition of **srv/orders-service.cds**. This requires the use of the Destination service to provide a TokenExchange.
+- The **orders** service should require the application's **User** scope due to the definition of **srv/orders-service.cds**. This requires the use of the Destination service to provide a token exchange.
 - The external endpoint of the service is accessible to all
 
-The deplyoment is declaratively defined in the **deployment.yaml** file.
+The deplyoment is declaratively defined in the **deployment.yaml** file. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
 ## Docker Setup
 
