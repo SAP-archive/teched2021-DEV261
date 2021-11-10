@@ -2,7 +2,7 @@
 
 ## Goal 🎯
 
-SAP Continuous Integration and Delivery (SAP CICD) lets you configure and run predefined continuous integration and delivery (CI/CD) pipelines that automatically test, build, and deploy your code changes to speed up your development and delivery cycles. SAP CICD supports a number of different use cases including the creation of pipelines used for the development of container-based applications. 
+SAP Continuous Integration and Delivery (SAP CICD) lets you configure and run predefined continuous integration and delivery (CI/CD) pipelines that automatically test, build, and deploy your code changes to speed up your development and delivery cycles. SAP CICD supports a number of different use cases including the creation of pipelines used for the development of container-based applications.
 
 This exercise will provide the necessary steps to configure and utlize a container-based applications pipeline which will deploy the CAP application into the Kyma runtime.
 
@@ -33,7 +33,7 @@ This process will only be required if your GitHub repo is **not public**. The pr
 
 ## Exercise 3.2 - CREATE THE DOCKER CREDENTIAL
 
-The SAP CICD service will publish a new container image each time a job is triggered. This process requires access to a container repository via an access token. In this case we use Docker Hub, as repository for the newly built container image. 
+The SAP CICD service will publish a new container image each time a job is triggered. This process requires access to a container repository via an access token. In this case we use Docker Hub, as repository for the newly built container image.
 
 This step details the process of the creation of the access token used to perform this process.
 
@@ -107,7 +107,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Branch: **main**
     - Pipeline: **Container-Base Applications**
   - Stages
-    - Container Registry URL: **https://index.docker.io**
+    - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/cap-orders-service**
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
@@ -124,7 +124,7 @@ In this step we will configure the jobs to build each piece of the application. 
 
 ### Exercise 3.5.2 - ORDERS-HTML5-DEPLOYER - OPTIONAL
 
-> This step is optional
+> Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
 
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
@@ -135,7 +135,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Branch: **main**
     - Pipeline: **Container-Base Applications**
   - Stages
-    - Container Registry URL: **https://index.docker.io**
+    - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-html5-deployer**
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
@@ -152,7 +152,7 @@ In this step we will configure the jobs to build each piece of the application. 
 
 ### Exercise 3.5.3 - ORDERS-DB-DEPLOYER - OPTIONAL
 
-> This step is optional
+> Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
 
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
@@ -163,7 +163,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Branch: **main**
     - Pipeline: **Container-Base Applications**
   - Stages
-    - Container Registry URL: **https://index.docker.io**
+    - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-db-deployer**
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
@@ -180,7 +180,7 @@ In this step we will configure the jobs to build each piece of the application. 
 
 ### Exercise 3.5.4 - CAPUITOOLS - OPTIONAL
 
-> This step is optional
+> Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
 
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
@@ -192,7 +192,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Branch: **main**
     - Pipeline: **Container-Base Applications**
   - Stages
-    - Container Registry URL: **https://index.docker.io**
+    - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/capui5tools**
     - Container Image Tag: **latest**
     - Container Registry Credentials: **dockercred**
