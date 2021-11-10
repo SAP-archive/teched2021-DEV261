@@ -29,7 +29,7 @@ You will also see how to setup your continous integration and delivery pipeline 
 
 ## Requirements
 
-To follow the exercises in this repository, you need to have a free SAP BTP trial account or you make use of the free tier inside your SAP BTP global account. Details are described on [SAP.com](https://www.sap.com/products/business-technology-platform/trial.html).
+To follow the exercises in this repository, you can also use a free SAP BTP trial account or you make use of the free tier inside your SAP BTP global account. Details are described on [SAP.com](https://www.sap.com/products/business-technology-platform/trial.html).
 
 Furthermore, you need to have the following tools and frameworks installed on your computer:
 
@@ -41,7 +41,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 
 ## Exercises
 
-- [Getting Started](exercises/ex0/)
+- [Getting Started](exercises/ex0/README.md)
   - [FORK AND CLONE REPO](exercises/ex0/README.md#fork-and-clone-the-repository)
   - [SAP BTP SUBACCOUNT CONFIGURATION](exercises/ex0/README.md#configure-subaccount-entitlements)
   - [SAP KYMA RUNTIME](exercises/ex0/README.md#kyma-runtime)
@@ -49,7 +49,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
   - [SAP CLOUD FOUNDRY CONFIGURATION](exercises/ex0/README.md#cloud-foundry)
   - [SAP CONTINUOUS INTEGRATION & DELIVERY SERVICE](exercises/ex0/README.md#continuous-integration--delivery)
   - [SAP HANA CLOUD](exercises/ex0/README.md#sap-hana-cloud)
-- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/)
+- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/README.md)
 - [Exercise 2 - PREPARE APP FOR LOCAL USE (optional)](exercises/ex2/)
 - [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex3/)
   - [Exercise 3.1 - CREATE THE GITHUB CREDENTIAL](exercises/ex3#exercise-31---create-the-github-credential)

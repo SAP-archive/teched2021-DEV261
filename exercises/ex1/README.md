@@ -2,7 +2,7 @@
 
 ## Goal 🎯
 
-In this exercise, we will create and configure an instance of the "Authorization and Trust Management" service within SAP BTP, Kyma runtime. With that service instance, you will generate a Role Collection inside the SAP BTP subaccount which will controle the access to the CAP application you will deploy later.
+In this exercise, we will create and configure an instance of the "Authorization and Trust Management" service within SAP BTP, Kyma runtime. With that service instance, you will generate a Role Collection inside the SAP BTP subaccount which will control the access to the CAP application you will deploy later.
 
 ## Exercise 1.1 Create the XSUAA Service Instance
 
@@ -75,7 +75,7 @@ The result looks like this:
 }
 ```
 
-Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` replacing the value of `<service key>`. With the preparation done in [GETTING STARTED - SAP HANA Cloud - Setup]{https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#setup}, the file will look like this:
+Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` replacing the value of `<service key>`. With the preparation done in [GETTING STARTED - SAP HANA Cloud - Setup](../ex0/README.md#setup), the file will look like this:
 
 ```json
 {
