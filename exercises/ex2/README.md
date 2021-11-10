@@ -1,8 +1,8 @@
-# Exercise 2 - PREPARE APP FOR LOCAL USE]
+# Exercise 2 - PREPARE APP FOR LOCAL USE (optional)
 
 ## Goal 🎯
 
-This exercise provides the commands to run the sample application locally. This is provided for informational purposes and is not needed to proceed with the exercise.
+This exercise provides the commands to run the sample application locally. This is provided for informational purposes and is not needed to proceed with the tutorial.
 
 ## Install the application dependencies
 
@@ -26,7 +26,7 @@ cds watch components
 
 The application is set to use a mock user. The relating user details are defined in **components/.cdsrc.json** as `kyma@cap.sap.com/initial`. This will not work if the **NODE_ENV** has been set to production.
 
-## REQUIRES THE COMPLETION OF [Exercise 5 - GENERATE THE CAP DATABASE](../ex5/README.md)
+> ⚠ NOTE: REQUIRES THE COMPLETION OF [Exercise 5 - GENERATE THE CAP DATABASE](../ex5/README.md)
 
 The application can also be configured to connect to the HANA Cloud instance. This first requires that the database has been fully setup which is performed in Exercise 5.
 
