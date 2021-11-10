@@ -16,7 +16,7 @@ kubectl -n cap apply -f ./resources/html5/xsuaa-service.yaml
 
 Inside the Kyma console, open the namespace `cap`.
 
-Now open the service instance `cap-orders-xsuaa-instance` found under Service Management -> Instances.
+Now open the service instance `cap-orders-xsuaa-instance` found under `Service Management` -> `Instances`.
 
 Choose the tab `Credentials` and choose the Secret `cap-orders-xsuaa-binding`.
 
