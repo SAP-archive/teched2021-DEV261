@@ -92,7 +92,7 @@ Assign the value `Launchpad_Admin` to the user.
 
 ## Cloud Foundry
 
-In the Overview area of your subaccount choose the option `Enable Cloud Foundry`. This will automatically add your user as CF Org Manager.
+In the Overview area of your subaccount choose the option `Enable Cloud Foundry` and choose `Create`. This will automatically add your user as CF Org Manager.
 
 Choose the menu option `Cloud Foundry` -> `Spaces` and then the option `Create Space`. Provide the name `dev` and choose `Create`. (In a trial account the `dev` space should be available by default)
 
@@ -112,7 +112,7 @@ Assign the value `CICD Service Administrator` to the user.
 
 ## SAP HANA Cloud
 
-> ⚠ NOTE:The creation of the instance will take some time. Also please note that when using the SAP BTP trial, the HANA instance will need to be restarted each day.
+> ⚠ NOTE: The creation of the instance will take some time. Also please note that when using the SAP BTP trial, the HANA instance will need to be restarted each day.
 
 ### Instance creation
 
@@ -132,6 +132,8 @@ On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP add
 Lastly, choose `Review and Create` and then `Create Instance`.
 
 ### Setup
+
+> ⚠ NOTE: The step requires that the creation of the SAP HANA Cloud has completed.
 
 Within your SAP BTP subaccount choose `Service Marketplace` and select `SAP HANA Schemas & HDI Containers`. Choose `Create` with the options
 
