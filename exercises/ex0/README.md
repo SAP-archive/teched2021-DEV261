@@ -8,7 +8,7 @@ This hands-on will combine many different SAP BTP services inside the SAP BTP, K
 
 ## Fork and Clone the Repository
 
-Open the webview of the this repository. On the left hand side, choose the option `Fork` and choose your GitHub account.
+Open the webview of the this repository. On the top right, choose the option `Fork` and choose your GitHub account.
 
 Once the creation of the fork is complete, clone the repo in a directory of your choice and open it in your desired editor
 
