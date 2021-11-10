@@ -2,21 +2,28 @@
 
 ## Goal 🎯
 
-In the file **srv/orders-service.js** you will find the definition of a CDS Action called **submitexternalorder**. The implemtation of this Action expects to receive an **orderNo** found in the body of a POST request. Using the received **orderNo** a call will be made to the serverless function **order-mock** using the Kyma cluster's internal network. This provides a random set of values which are then inserted into the Hana Cloud database.
+In this exercise we will add a Mock application namely a Kyma function into the Kyma cluster to insert order data into the SAP HANA Database whenever a **submitexternalorder** is called using the internal network of the Kyma cluster.
 
-Apply the **order-mock** function deployment
+## Setup of the Mock Application
+
+In the file **srv/orders-service.js** you find the definition of a CDS Action called **submitexternalorder**. The implemtation of this Action expects to receive an **orderNo** found in the body of a POST request. Using the received **orderNo** a call will be made to the Kyma function **order-mock** using the Kyma cluster's internal network. The function provides a random set of values which are then inserted into the SAP HANA Cloud database.
+
+To deploy the Kyma function apply the **order-mock** function deployment
 
 ```shell
 kubectl -n cap apply -f ./resources/functionmock/deployment.yaml
 ```
 
-To be able to test locally apply the **order-mock** apirule deployment
+
+## Local Call of the Mock Application
+
+To be able to test locally apply the **order-mock** API rule deployment via:
 
 ```shell
 kubectl -n cap apply -f ./resources/functionmock/apirule.yaml
 ```
 
-The mock function can be called using:
+Now call the mock function using:
 
 - In shell
 
@@ -30,7 +37,7 @@ The mock function can be called using:
   curl.exe '-X' 'POST' 'https://order-mock.<cluster url>/orders' '-H' 'Content-Type: application/json' '-d' '{\"orderNo\": 123123}'
   ```
 
-This result of this call should be similar to
+The result of this call should be similar to:
 
 ```json
 {
@@ -49,13 +56,15 @@ This result of this call should be similar to
 }
 ```
 
-After testing locally the api rule can be deleted
+After testing delete the API rule via:
 
 ```shell
 kubectl -n cap delete -f ./resources/functionmock/apirule.yaml
 ```
 
-Using the **access_token** obtained in the previous exercise call the **external/submitorder** endpoint again
+## Call via SUBMITORDER Action
+
+Using the **access_token** obtained in [exercise 9](../ex9/README.md)  we call the **external/submitorder** endpoint again
 
 - In shell
 
@@ -102,12 +111,12 @@ This call should now succeed with a response similar to
 }
 ```
 
-You should also now find another entry in the Orders application configured to be shown in the SAP Launchpad
+You now find another entry in the Orders application configured to be shown in the SAP Launchpad
 
-![](./images/orders.png)
+![SAP Launchpad - Orders Application ](./images/orders.png)
 
 ## Summary
 
-🎉 Congratulations - You successfully completed the exercise!
+🚀 Congratulations - You successfully completed the setup of the mock up and you made it through this tutorial! 🚀
 
-[◀ Previous exercise](../ex9/README.md) | [🔼 Overview](../../README.md)
+[◀ Previous exercise](../ex10/README.md) | [🔼 Overview](../../README.md)
