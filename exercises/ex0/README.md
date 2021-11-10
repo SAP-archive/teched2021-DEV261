@@ -154,15 +154,15 @@ This means, the vcap_services.json will look like this:
     {
       "binding_name": null,
       "credentials":  {
-        "host": {host},
+        "host": "{host}",
         "port": "443",
         "driver": "com.sap.db.jdbc.Driver",
-        "url": {url},
-        "schema": {schema},
-        "hdi_user": {hdi_user},
-        "hdi_password": {hdi_password},
-        "user": {user},
-        "password": {password},
+        "url": "{url}",
+        "schema": "{schema}",
+        "hdi_user": "{hdi_user}",
+        "hdi_password": "{hdi_password}",
+        "user": "{user}",
+        "password": "{password}",
         "certificate": "-----BEGIN CERTIFICATE-----{certificate}-----END CERTIFICATE-----"
       } ,
       "instance_name": "cpapp",
