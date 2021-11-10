@@ -145,7 +145,7 @@ In this step we will configure the jobs to build each piece of the application. 
     - Kubernetes Credentials: **kymacred**
     - Namespace: **cap**
     - Deploy Tool: **helm3**
-    - Chart Path: **resources/html5/helm/cap-html5-deployer**
+    - Chart Path: **resources/html5/helm/orders-html5-deployer**
     - Deployment Name: **orders-html5-deployer**
     - Helm Values: **resources/html5/helm/orders-html5-deployer/values.yaml**
     - Force Resource Updates: **true**
