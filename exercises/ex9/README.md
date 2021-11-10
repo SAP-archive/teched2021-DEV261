@@ -2,9 +2,9 @@
 
 ## Goal 🎯
 
-As of now the the action **submitexternalorder**, exposed by the cap service using the path `/external`, is exposed without requiring authentication. This is determined by the definition found in the file **components/srv/orders-service.cds**.
+As of now the the action **submitexternalorder**, exposed by the cap service using the path `/external`, is not requiring authentication. This is determined by the definition found in the file **components/srv/orders-service.cds**.
 
-The goal of this exercise is to reconfigure the API rule so that authentication via OAuth2 is necessary. This will be accomplished by leveraging the OAuth2 functionality delivered with Kyma.
+The goal of this exercise is to reconfigure the API rule in Kyma so that authentication via OAuth2 is necessary. This will be accomplished by leveraging the OAuth2 functionality delivered with Kyma.
 
 ## API Rule with OAuth2
 
@@ -70,7 +70,7 @@ Let us validate that the change is effective by issuing a POST request to the en
   curl.exe '-X' 'POST' 'https://cap-orders-service.<cluster url>/external/submitorder' '-H' 'Content-Type: application/json' '-d' '{\"orderNo\": 123123}'
   ```
 
-This result in an error due to missing authentication. To overcome this we will therefore setup an OAuth client in Kyma that provides with the needed credentials to execute the call to the action successfully.
+This result in an error due to missing authentication. To overcome this we will set up an OAuth client in Kyma that provides the needed credentials to execute the call successfully.
 
 ## OAuth Client in Kyma
 
