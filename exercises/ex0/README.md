@@ -94,6 +94,8 @@ In the Overview area of your subaccount choose the option `Enable Cloud Foundry`
 
 Choose the menu option `Cloud Foundry` -> `Spaces` and then the option `Create Space`. Provide the name `dev` and choose `Create`. (In a trial account the `dev` space should be available by default)
 
+> ⚠ NOTE: The Cloud Foundry space is required to provision SAP Hana Cloud Database.
+
 ## Continuous Integration & Delivery
 
 ### PROVISIONING
@@ -131,8 +133,8 @@ Lastly, choose `Review and Create` and then `Create Instance`.
 
 Within your SAP BTP subaccount choose `Service Marketplace` and select `SAP HANA Schemas & HDI Containers`. Choose `Create` with the options
 
-- Plan: `hdi-shared`
-- Instance Name: `cap-orders-kyma`
+* Plan: `hdi-shared`
+* Instance Name: `cap-orders-kyma`
 
 Choose `Create` and select the option `View Instance`. Once the instance is created, open the instance and choose the option `Create` under `Service Keys`. Provide the service Key Name `kyma` and choose `Create`.
 
