@@ -122,7 +122,7 @@ target/
 mta_archives/
 
 # Other
-.DS_Store
+*.DS_Store
 *.orig
 *.log
 
@@ -137,6 +137,5 @@ vcap.json
 
 credentials/*
 
-ordersORG/
 tutorial-kubeconfig.yaml
 
