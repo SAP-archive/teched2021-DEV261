@@ -112,9 +112,9 @@ Assign the value `CICD Service Administrator` to the user.
 
 ### Instance creation
 
-In the subaccount view, open `Cloud Foundry` -> `Spaces` and select the `dev` space and choose the menu item `SAP HANA Cloud`. Choose `Create -> `SAP HANA Database`.
+In the subaccount view, open `Cloud Foundry` -> `Spaces` and select the `dev` space and choose the menu item `SAP HANA Cloud`. Choose `Create` -> `SAP HANA Database`.
 
-In SAP HANA Cloud Centra, select as `Type` the entry `SAP HANA Cloud, SAP HANA Database`. Choose `Next Step` at the bottom left.
+In SAP HANA Cloud Central, select as `Type` the entry `SAP HANA Cloud, SAP HANA Database`. Choose `Next Step` at the bottom right.
 
 Provide the following values:
 
@@ -123,9 +123,9 @@ Provide the following values:
 
 Chose `Next Step` and keep the default values of the next two screens by choosing `Next Step` twice.
 
-On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP addresses` and choose `Review and Create`.
+On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP addresses` and choose `Next Step`. 
 
-Choose `Create Instance`.
+Lastly, choose `Review and Create` and then `Create Instance`.
 
 ### Setup
 
