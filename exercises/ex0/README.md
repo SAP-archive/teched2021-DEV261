@@ -26,13 +26,13 @@ Choose `Configure Entitlements` and `Add Service Plans` to select additional ent
 
 In the pop-up, choose the entitlements:
 
-| Entitlement                                | Plan 
-|---                                        |---
-| `Continuous Integration & Delivery`       | any available plan in the list (`trial` and `free` are not charged)
-| `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)
-| `Launchpad Service` (if not yet entitled) | `standard`
-| `SAP HANA Cloud`                          | `hana`
-| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`
+| Entitlement                               | Plan                                                                |
+| ----------------------------------------- | ------------------------------------------------------------------- |
+| `Continuous Integration & Delivery`       | any available plan in the list (`trial` and `free` are not charged) |
+| `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged) |
+| `Launchpad Service` (if not yet entitled) | `standard`                                                          |
+| `SAP HANA Cloud`                          | `hana`                                                              |
+| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`                                                        |
 
 Chsose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
 
@@ -52,19 +52,19 @@ Choose your user and the option `Assign Role Collection`. Assign the value `Kyma
 
 ### Getting the Kubeconfig for CLI access and preparing Kyma runtime
 
-In the Overview area of your subaccount open the `Console URL` you find under `Kyma Environment`. At the top right of the window choose the user drop down and choose `Get Kubeconfig`. Be aware that this kubeconfig is only valid for *8 hours*.
+In the Overview area of your subaccount open the `Console URL` you find under `Kyma Environment`. At the top right of the window choose the user drop down and choose `Get Kubeconfig`. Be aware that this kubeconfig is only valid for _8 hours_.
 
 > ⚠ NOTE: If your user was just assigned to the `KymaRuntimeNamespaceAdmin`-Role-Collection and the Kyma console UI is rejecting access, try opening it in a private browsing window.
 
 Next set the kubeconfig to an environment variable:
 
-* In a shell
+- In a shell
 
   ```shell
   export KUBECONFIG={KUBECONFIG_FILE_PATH}
   ```
 
-* In PowerShell
+- In PowerShell
 
   ```powershell
   $ENV:KUBECONFIG="{KUBECONFIG_FILE_PATH}"
@@ -108,7 +108,7 @@ Assign the value `CICD Service Administrator` to the user.
 
 ## SAP HANA Cloud
 
-> ⚠ NOTE:The creation of the instance will take some time
+> ⚠ NOTE:The creation of the instance will take some time. Also please note that when using the SAP BTP trial, the HANA instance will need to be restarted each day.
 
 ### Instance creation
 
@@ -118,12 +118,12 @@ In SAP HANA Cloud Central, select as `Type` the entry `SAP HANA Cloud, SAP HANA 
 
 Provide the following values:
 
-- `Instance Name`: `teched`  
+- `Instance Name`: `teched`
 - `Administrator Password`: Any value
 
 Chose `Next Step` and keep the default values of the next two screens by choosing `Next Step` twice.
 
-On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP addresses` and choose `Next Step`. 
+On the `SAP HANA Database Advanced Settings` choose the option `Allow all IP addresses` and choose `Next Step`.
 
 Lastly, choose `Review and Create` and then `Create Instance`.
 
