@@ -28,11 +28,13 @@ In the pop-up, choose the entitlements:
 
 | Entitlement                                | Plan 
 |---                                        |---
-| `SAP HANA Cloud`                          | `hana`
-| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`
 | `Continuous Integration & Delivery`       | any available plan in the list (`trial` and `free` are not charged)
 | `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)
 | `Launchpad Service` (if not yet entitled) | `standard`
+| `SAP HANA Cloud`                          | `hana`
+| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`
+
+Chsose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
 
 ## Kyma runtime
 
