@@ -26,12 +26,13 @@ Choose `Configure Entitlements` and `Add Service Plans` to select additional ent
 
 In the pop-up, choose the entitlements:
 
-- Entitlement: `SAP HANA Cloud` - Plan: `hana`
-- Entitlement: `SAP HANA Schemas & HDI Containers` - Plan: `hdi-shared`
-- Entitlement: `Continuous Integration & Delivery` - Plan: any available plan in the list; `trial` and `free` are not charged
-- (if not yet entitled) Entitlement: `Kyma runtime` - Plan: any available plan in the list; `trial` and `free` are not charged
-- (if not yet entitled) Entitlement: `Launchpad Service` - Plan: `standard`
-- Choose `Add x Service Plans` and then `Save`
+| Entitlement                                | Plan 
+|---                                        |---
+| `SAP HANA Cloud`                          | `hana`
+| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`
+| `Continuous Integration & Delivery`       | any available plan in the list (`trial` and `free` are not charged)
+| `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)
+| `Launchpad Service` (if not yet entitled) | `standard`
 
 ## Kyma runtime
 
@@ -115,8 +116,8 @@ In SAP HANA Cloud Centra, select as `Type` the entry `SAP HANA Cloud, SAP HANA D
 
 Provide the following values:
 
-- `teched` as the `Instance Name`
-- Any value for the `Administrator Password`
+- `Instance Name`: `teched`  
+- `Administrator Password`: Any value
 
 Chose `Next Step` and keep the default values of the next two screens by choosing `Next Step` twice.
 
