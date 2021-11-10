@@ -26,13 +26,13 @@ Choose `Configure Entitlements` and `Add Service Plans` to select additional ent
 
 In the pop-up, choose the entitlements:
 
-| Entitlement                               | Plan                                                                         |
-| ----------------------------------------- | ---------------------------------------------------------------------------- |
-| `Continuous Integration & Delivery`       | `default (Application)` or the `trial` or `free` plans which are not charged |
-| `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)          |
-| `Launchpad Service` (if not yet entitled) | `standard`                                                                   |
-| `SAP HANA Cloud`                          | `hana`                                                                       |
-| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`                                                                 |
+| Entitlement                               | Plan                                                                                                     |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `Continuous Integration & Delivery`       | `default (Application)` or the `trial (Application)` or `free (Application)` plans which are not charged |
+| `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)                                      |
+| `Launchpad Service` (if not yet entitled) | `standard (Application)` or `free (Application)`                                                         |
+| `SAP HANA Cloud`                          | `hana`                                                                                                   |
+| `SAP HANA Schemas & HDI Containers`       | `hdi-shared`                                                                                             |
 
 Chsose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
 
