@@ -19,6 +19,8 @@ This application will also make use of the services:
 - [SAP Alert Notification](https://discovery-center.cloud.sap/serviceCatalog/alert-notification)
 - [SAP HTML5 Application Repository](https://discovery-center.cloud.sap/serviceCatalog/html5-application-repository-service)
 
+> ⚠ NOTE: Particularly the enablement of SAP BTP, Kyma runtime and instance creation of SAP HANA Cloud takes around 1 hour. Therefore, it is recommended that you finalize [Getting Started](exercises/ex0/) ahead of time.
+
 The overall solution will finally look like this:
 
 ![Solution Diagram](./assets/solution-diagram.png)
