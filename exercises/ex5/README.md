@@ -2,13 +2,20 @@
 
 ## Goal 🎯
 
-This process will deploy the CAP application database into the SAP HANA Cloud. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
+The goal of this exercise is to deploy the CAP application database into the SAP HANA Cloud. 
 
-- The structure of the database is defined within the file **/db/schema.cds** and the associated data which will be inserted into the database can be found at **db/data**.
-- There are two resources related to the creation of the database:
+Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
+
+## Prework
+
+The structure of the database is defined within the file **/db/schema.cds**. You find the associated data which will be inserted into the database at **db/data**.
+
+There are two resources related to the creation of the database:
 
   - A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
   - A Kubernetes job which processes the deployemnt relying on the vcap-services credential
+
+To push the Docker files we will create in the next steps to the right registry execute the folowing steps:
 
 - Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
@@ -22,7 +29,6 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 
 - Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
-
 - Build and push the container to your docker account
 
   ```shell
@@ -33,7 +39,7 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 
 - Within the the file **/resources/db/deploy-job.yaml** adjust the value of **{your-docker-account}**
 - Save the changes
-- Apply the job
+- Apply the deploy job
 
   ```shell
   kubectl -n cap replace --force -f ./resources/db/deploy-job.yaml
@@ -45,13 +51,13 @@ This process will deploy the CAP application database into the SAP HANA Cloud. D
 - Save the changes
 - Install the Helm chart
 
-```shell
-helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n cap
-```
+  ```shell
+  helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n cap
+  ```
 
 ## Summary
 
-🎉 Congratulations - You've now ...
+🎉 Congratulations - You've now generated the CAP application database in SAP HANA Cloud.
 
 Continue to [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG](../ex6/README.md)
 
