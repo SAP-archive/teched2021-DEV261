@@ -6,7 +6,7 @@ The SAP Alert Notification allows users/groups to subscripe to a number of diffe
 
 The file **resources/alertnotif/deployment.yaml** will be applied after a few modifications. This will generate the following resources:
 
-- SAP Alert Notification Service instance named `alert-notif-ser-instance`
+- A SAP Alert Notification Service instance named `alert-notif-ser-instance`
 - A serverless function named `alert-notif`
 - A service binding and a service binding usage
 
@@ -57,12 +57,12 @@ Using the **access_token** obtained in the previous exercise call the **external
   curl.exe '-X' 'POST' 'https://cap-orders-service.<cluster url>/external/submitorder' '-H' 'Content-Type: application/json' '-H' 'Authorization: Bearer <access_token>' '-d' '{\"orderNo\": 123123}'
   ```
 
-This call will fail with the error `an error occurred...`, but you should now received an email for the SAP Alert Notification service indicating an event type of **system_down_condition**. The next exericse will resolve this condition.
+This call will fail with the error `an error occurred...`, but you should now receive an email from the SAP Alert Notification service indicating an event type of **system_down_condition**. The next exericse will resolve the error condition.
 
 ## Summary
 
 🎉 Congratulations - You successfully configured the SAP Alert Notification to notify you when the **MOCK_HOST** is not accessible.
 
-Continue to - [Exercise 11 - MOCK APPLICATION](../ex8/README.md)
+Continue to - [Exercise 11 - MOCK APPLICATION](../ex11/README.md)
 
 [◀ Previous exercise](../ex9/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex11/README.md)
