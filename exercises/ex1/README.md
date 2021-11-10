@@ -75,7 +75,7 @@ The result looks like this:
 }
 ```
 
-Copy the result into the `xsuaa.credentials` found in the vcap_services.json replacing the value of `<service key>`. With the preparation done in [GETTING STARTED - SAP HANA Cloud - Setup]{https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#setup}, the file will look like this:
+Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` replacing the value of `<service key>`. With the preparation done in [GETTING STARTED - SAP HANA Cloud - Setup]{https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#setup}, the file will look like this:
 
 ```json
 {
@@ -151,7 +151,7 @@ Create a secret in Kyma containing the contents of this file executing the follo
 
 ## Exercise 1.4 - Add User to Role Templage
 
-Add your user to the Role collection `cap-orders-kyma-rc` by navigating to the SAP BTP subaccount you are using. Within the SAP BTP cockpit open **Security -> Role Collections**. Choose `Edit`, add your user, and `Save` your changes.
+Add your user to the Role collection `cap-orders-kyma-rc` by navigating to the SAP BTP subaccount you are using. Within the SAP BTP cockpit open `Security` -> `Role Collections`. Choose `Edit`, add your user, and `Save` your changes.
 
 ## Summary
 
