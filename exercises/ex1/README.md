@@ -39,7 +39,7 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
     \"URL\":\"https://cap-orders-service.{cluster domain}\"}]"
 ```
 
-Not it's time to apply the configmap to the cluster.
+Now it's time to apply the configmap to the cluster.
 
 ```shell
 kubectl -n cap apply -f ./credentials/html5-config-secret.yaml
@@ -75,7 +75,59 @@ The result looks like this:
 }
 ```
 
-Copy the result into the `xsuaa.credentials` found in the vcap_services.json replacing the value of `<service key>`.
+Copy the result into the `xsuaa.credentials` found in the vcap_services.json replacing the value of `<service key>`. With the preparation done in [GETTING STARTED - SAP HANA Cloud - Setup]{https://github.com/SAP-samples/teched2021-DEV261/blob/main/exercises/ex0/README.md#setup}, the file will look like this:
+
+```json
+{
+  "xsuaa":[{
+    "name": "cpapp",
+        "label": "xsuaa",
+        "tags": ["xsuaa"],
+        "credentials": {
+            "apiurl": "https://api.authentication.{region}.hana.ondemand.com",
+            "clientid": "{clientid}",
+            "clientsecret": "{clientsecret}",
+            "credential-type": "instance-secret",
+            "identityzone": "{identityzone}",
+            "identityzoneid": "{identityzoneid}",
+            "sburl": "https://internal-xsuaa.authentication.{region}.hana.ondemand.com",
+            "subaccountid": "{subaccountid}",
+            "tenantid": "{tenantid}",
+            "tenantmode": "dedicated",
+            "uaadomain": "authentication.{region}.hana.ondemand.com",
+            "url": "{url}",
+            "verificationkey": "-----BEGIN PUBLIC KEY-----{verificationkey}-----END PUBLIC KEY-----",
+            "xsappname": "{xsappname}",
+            "zoneid": "{zoneid}"
+        } ,
+  }],
+  "hana": [
+    {
+      "binding_name": null,
+      "credentials":  {
+        "host": "{host}",
+        "port": "443",
+        "driver": "com.sap.db.jdbc.Driver",
+        "url": "{url}",
+        "schema": "{schema}",
+        "hdi_user": "{hdi_user}",
+        "hdi_password": "{hdi_password}",
+        "user": "{user}",
+        "password": "{password}",
+        "certificate": "-----BEGIN CERTIFICATE-----{certificate}-----END CERTIFICATE-----"
+      } ,
+      "instance_name": "cpapp",
+      "label": "cpapp",
+      "name": "cpapp",
+      "plan": "hdi-shared",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": ["hana", "database", "relational"],
+      "volume_mounts": []
+    }
+  ]
+}
+```
 
 Create a secret in Kyma containing the contents of this file executing the following steps.
 
