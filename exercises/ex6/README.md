@@ -4,12 +4,11 @@
 
 In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
-
 ## Deployment of Service Instances
 
 We will also deploy the BACKEND_DESTINATION to the service. This requires a few service instances to be generated which are defined within the file **service-instances.yaml**.
 
-> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directly. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-map.yaml**
+> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directly. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-secret.yaml**
 
 To do the deployment execute the following steps:
 

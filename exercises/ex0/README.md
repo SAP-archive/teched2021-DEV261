@@ -133,8 +133,8 @@ Lastly, choose `Review and Create` and then `Create Instance`.
 
 Within your SAP BTP subaccount choose `Service Marketplace` and select `SAP HANA Schemas & HDI Containers`. Choose `Create` with the options
 
-* Plan: `hdi-shared`
-* Instance Name: `cap-orders-kyma`
+- Plan: `hdi-shared`
+- Instance Name: `cap-orders-kyma`
 
 Choose `Create` and select the option `View Instance`. Once the instance is created, open the instance and choose the option `Create` under `Service Keys`. Provide the service Key Name `kyma` and choose `Create`.
 

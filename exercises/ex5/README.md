@@ -2,7 +2,7 @@
 
 ## Goal 🎯
 
-The goal of this exercise is to deploy the CAP application database into the SAP HANA Cloud. 
+The goal of this exercise is to deploy the CAP application database into the SAP HANA Cloud.
 
 Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
@@ -12,8 +12,8 @@ The structure of the database is defined within the file **/db/schema.cds**. You
 
 There are two resources related to the creation of the database:
 
-  - A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
-  - A Kubernetes job which processes the deployemnt relying on the vcap-services credential
+- A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
+- A Kubernetes job which processes the deployemnt relying on the vcap-services credential
 
 To push the Docker files we will create in the next steps to the right registry execute the folowing steps:
 
