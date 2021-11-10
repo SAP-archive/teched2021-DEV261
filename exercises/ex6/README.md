@@ -2,9 +2,16 @@
 
 ## Goal 🎯
 
-In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Additionally the BACKEND_DESTINATION to the service will be deployed. This step requires a few service instances to be generated which are defined within **service-instances.yaml**.
+In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
-> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directory. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-map.yaml**
+
+## Deployment of Service Instances
+
+We will also deploy the BACKEND_DESTINATION to the service. This requires a few service instances to be generated which are defined within the file **service-instances.yaml**.
+
+> ⚠ NOTE: The BACKEND_DESTINATION, **cap-orders-kyma-srv,** is configured to be defined as a subaccount destination and can be found within the subaccount under **Connectivity -> Destinations**. If any errors were made doing the deployment the destination can be modified directly. The property **SUBACCOUNT_LEVEL_DESTINATION** found within the **deploy-job.yaml** can be set to false to create instance destinations. The definition of the **BACKEND_DESTINATION** was configured in an earlier step and saved as **credentials/html5-config-map.yaml**
+
+To do the deployment execute the following steps:
 
 - Open the file **/resources/html5/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
@@ -50,13 +57,13 @@ In the step we will deploy the static HTML5 application to the **HTML5 Applicati
 - Save the changes
 - Install the Helm chart
 
-```shell
-helm install orders-html5-deployer ./resources/db/helm/orders-html5-deployer -n cap
-```
+  ```shell
+  helm install orders-html5-deployer ./resources/db/helm/orders-html5-deployer -n cap
+  ```
 
 ## Summary
 
-🎉 Congratulations - You've now ...
+🎉 Congratulations - You've now deployed the HTML5 app and thge launchpad configuration.
 
 Continue to [Exercise 7 - BUILD AND DEPLOY CAP SERVICE](../ex7/README.md)
 
