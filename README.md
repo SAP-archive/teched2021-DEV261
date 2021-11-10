@@ -49,7 +49,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
   - [SAP CLOUD FOUNDRY CONFIGURATION](exercises/ex0/README.md#cloud-foundry)
   - [SAP CONTINUOUS INTEGRATION & DELIVERY SERVICE](exercises/ex0/README.md#continuous-integration--delivery)
   - [SAP HANA CLOUD](exercises/ex0/README.md#sap-hana-cloud)
-- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/)
+- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/README.md)
 - [Exercise 2 - PREPARE APP FOR LOCAL USE (optional)](exercises/ex2/)
 - [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex3/)
   - [Exercise 3.1 - CREATE THE GITHUB CREDENTIAL](exercises/ex3#exercise-31---create-the-github-credential)
