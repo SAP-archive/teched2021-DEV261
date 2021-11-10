@@ -44,6 +44,8 @@ Chsose `Add x Service Plans` in case you had to select any of the above and choo
 
 In the overview area of your subaccount choose the option to `Enable Kyma` runtime. If the button for enabling Kyma runtime is not showing up, ensure that the entitlement has been set correctly.
 
+> ⚠ NOTE: A detailed step by step can be found in the following [tutorial](https://developers.sap.com/tutorials/cp-kyma-getting-started.html)
+
 ### Assignment of role collection for Kyma
 
 After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. To do so, chose `Security` -> `Users` in the menu on the left.
