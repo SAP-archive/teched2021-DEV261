@@ -41,7 +41,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 
 ## Exercises
 
-- [Getting Started](exercises/ex0/README.md)
+- [Getting Started](exercises/ex0/)
   - [FORK AND CLONE REPO](exercises/ex0/README.md#fork-and-clone-the-repository)
   - [SAP BTP SUBACCOUNT CONFIGURATION](exercises/ex0/README.md#configure-subaccount-entitlements)
   - [SAP KYMA RUNTIME](exercises/ex0/README.md#kyma-runtime)
@@ -49,9 +49,9 @@ Furthermore, you need to have the following tools and frameworks installed on yo
   - [SAP CLOUD FOUNDRY CONFIGURATION](exercises/ex0/README.md#cloud-foundry)
   - [SAP CONTINUOUS INTEGRATION & DELIVERY SERVICE](exercises/ex0/README.md#continuous-integration--delivery)
   - [SAP HANA CLOUD](exercises/ex0/README.md#sap-hana-cloud)
-- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/README.md)
-- [Exercise 2 - PREPARE APP FOR LOCAL USE (optional)](exercises/ex2/README.md)
-- [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex3/README.md)
+- [Exercise 1 - CREATE THE XSUAA SERVICE INSTANCE](exercises/ex1/)
+- [Exercise 2 - PREPARE APP FOR LOCAL USE (optional)](exercises/ex2/)
+- [Exercise 3 - CONFIGURE THE SAP CICD SERVICE](exercises/ex3/)
   - [Exercise 3.1 - CREATE THE GITHUB CREDENTIAL](exercises/ex3#exercise-31---create-the-github-credential)
   - [Exercise 3.2 - CREATE THE DOCKER CREDENTIAL](exercises/ex3#exercise-32---create-the-docker-credential)
   - [Exercise 3.3 - CONFIGURE KUBECONFIG](exercises/ex3#exercise-33---configure-kubeconfig)
@@ -66,7 +66,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
   - [Exercise 5.1 - DEPLOYMENT OPTION 1 - SAP CICD](exercises/ex5#exercise-51---deployment-option-1---sap-cicd)
   - [Exercise 5.2 - DEPLOYMENT OPTION 2 - kubectl](exercises/ex5#exercise-52---deployment-option-2---kubectl)
   - [Exercise 5.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex5#exercise-53---deployment-option-3---helm)
-- [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG ](exercises/ex6/)
+- [Exercise 6 - DEPLOY HTML5 APP AND LAUNCHPAD CONFIG](exercises/ex6/)
   - [Exercise 6.1 - DEPLOYMENT OPTION 1 - SAP CICD](exercises/ex6#exercise-61---deployment-option-1---cicd-service)
   - [Exercise 6.2 - DEPLOYMENT OPTION 2 - kubectl](exercises/ex6#exercise-62---deployment-option-2---kubectl)
   - [Exercise 6.3 - DEPLOYMENT OPTION 3 - Helm](exercises/ex6#exercise-63---deployment-option-3---helm)
