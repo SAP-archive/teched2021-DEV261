@@ -104,7 +104,7 @@ Back in the subaccount, choose `Service Marketplace`. Select `Continuous Integra
 
 Assign the role for the CICD Service by choosing `Security` -> `Users` in the subaccount. Then choose your user and the option `Assign Role Collection`.
 
-Assign the value `CICD Service Administrator to the user.
+Assign the value `CICD Service Administrator` to the user.
 
 ## SAP HANA Cloud
 
