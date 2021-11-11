@@ -84,7 +84,8 @@ This step details the process of adding the GitHub repository container the code
 - Provide the url to your forked repo as the **Clone URL**
 - If you defined a credential for your repo add it as the **Credentials** value
 - Leave the rest of the values with their defaults and choose **Add**
-- Choose **Webhook Data**
+
+- Choose **Webhook Data** at the top of the just-created entry
 - There will be a link on the dialog which will navigate to **Settings -> Hooks** of the desigated repo
 - Choose **Add webhook**
 - Copy the values and adjust the **Content type**
