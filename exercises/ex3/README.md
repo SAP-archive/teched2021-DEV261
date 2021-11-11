@@ -85,10 +85,11 @@ This step details the process of adding the GitHub repository container the code
 - If you defined a credential for your repo add it as the **Credentials** value
 - Leave the rest of the values with their defaults and choose **Add**
 
+After the creation
 - Choose **Webhook Data** at the top of the just-created entry
-- There will be a link on the dialog which will navigate to **Settings -> Hooks** of the desigated repo
+- There will be a link called `dev261` on the dialog which will navigate to **Settings -> Hooks** of the desigated repo
 - Choose **Add webhook**
-- Copy the values and adjust the **Content type**
+- Copy the values `Payload URL` and `Secret` from the pop-up within the SAP CICD page, paste it into the `Add Webhook` screen, and adjust the **Content type**
 - Choose **Add webhook**
 
 ## Exercise 3.5 - CREATE THE CICD JOBS
