@@ -124,6 +124,8 @@ In this step we will configure the jobs to build each piece of the application. 
     - Helm Values: **resources/service/helm/cap-orders-service/values.yaml**
     - Force Resource Updates: **false**
 
+Choose `Create`.
+
 ### Exercise 3.5.2 - ORDERS-HTML5-DEPLOYER - OPTIONAL
 
 > Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
