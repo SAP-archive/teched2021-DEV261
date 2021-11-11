@@ -12,7 +12,9 @@ Execute the following commands to first build and then push the tools base image
 
 ```shell
 docker build -t {your-docker-account}/capui5tools -f ./resources/capui5tools/Dockerfile .
+```
 
+```shell
 docker push {your-docker-account}/capui5tools
 ```
 
