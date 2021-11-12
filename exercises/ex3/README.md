@@ -13,7 +13,11 @@ This exercise will provide the necessary steps to configure and utlize a contain
 
 ## Exercise 3.1 - CREATE THE GITHUB CREDENTIAL
 
-This process will only be required if your GitHub repo is **not public**. The process will include the creation of a **Personal access token** which is used as a credential to pull the code from your repo.
+This process will only be required if your GitHub repo is **not public**. 
+
+> ⚠ NOTE: If you forked this repo into your personal GitHub account, it most likely isn't public and will say `private` at the top left.
+
+The process will include the creation of a **Personal access token** which is used as a credential to pull the code from your repo.
 
 - Within your Forked repository at the top right choose **your avatar -> Settings**
 - Choose **Developer settings**
