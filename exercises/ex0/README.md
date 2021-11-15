@@ -38,7 +38,7 @@ Chsose `Add x Service Plans` in case you had to select any of the above and choo
 
 ## Kyma runtime
 
-> ⚠ NOTE: A detailed step by step can be found in the following [tutorial](https://developers.sap.com/tutorials/cp-kyma-getting-started.html)
+A detailed step by step can be found in the following [tutorial](https://developers.sap.com/tutorials/cp-kyma-getting-started.html)
 
 ### Provisioning
 
