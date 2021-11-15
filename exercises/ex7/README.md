@@ -13,7 +13,7 @@ When exposing the CAP service we want to achieve that:
 - The **orders** service should require the application's **User** scope due to the definition of **srv/orders-service.cds**. This requires the use of the Destination service to provide a token exchange.
 - The external endpoint of the service is accessible to all
 
-The deplyoment is declaratively defined in the **deployment.yaml** file. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
+The deplyoment is declaratively defined in the **deployment.yaml** file. Depending on the previous setup choose the desired method for deployment. If the relating job ['cap-orders-service' was configured within the SAP CICD service](../ex3#exercise-351---cap-orders-service) then only the configuration of the helm chart is necessary, otherwise either the steps **7.2 - DEPLOYMENT OPTION 2 - kubectl** or **7.3 - DEPLOYMENT OPTION 3 - Helm** need to be followed.
 
 ## Docker Setup
 
