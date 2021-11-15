@@ -22,7 +22,7 @@ To do the deployment execute the following steps:
 
 ## Exercise 6.1 - DEPLOYMENT OPTION 1 - CICD Service
 
-- Open the file **/resources/html5/orders-html5-deployer/orders-html5-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/html5/helm/orders-html5-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 ## Exercise 6.2 - DEPLOYMENT OPTION 2 - kubectl
