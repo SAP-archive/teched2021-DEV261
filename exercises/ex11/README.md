@@ -56,6 +56,8 @@ The result of this call should be similar to:
 }
 ```
 
+If you get the message "no healthy upstream", try again after a minute.
+
 After testing delete the API rule via:
 
 ```shell
