@@ -157,6 +157,6 @@ This call is now sucessfully authenticated due to the provided access token, but
 
 🎉 Congratulations - You've now secured your `submitorder` action via OAuth2 and accessed the endpoint leveraging the OAuth2 client of Kyma
 
-Continue to - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](../ex8/README.md)
+Continue to - [Exercise 10 - SAP ALERT NOTIFICATION CONFIGURATION](../ex10/README.md)
 
 [◀ Previous exercise](../ex8/README.md) | [🔼 Overview](../../README.md) | [Next exercise ▶](../ex10/README.md)
