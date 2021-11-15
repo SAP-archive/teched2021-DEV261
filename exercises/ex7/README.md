@@ -32,6 +32,8 @@ In order to trigger the deployment via the SAP CICD service execute the followin
 - Save the changes
 - Commit the changes to your GitHub repository
 
+The commit to your GitHub repository will trigger the SAP CICD service to start working on the pipeline. 
+
 ## Exercise 7.2 - DEPLOYMENT OPTION 2 - kubectl
 
 In order to trigger the deployment via kubectl execute the following steps:
