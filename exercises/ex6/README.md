@@ -2,7 +2,7 @@
 
 ## Goal 🎯
 
-In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
+In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Depending on the previous setup choose the desired method for deployment. If the relating job ['orders-html5-deployer' was configured within the SAP CICD service](../ex3#exercise-352---orders-html5-deployer---optional) then only the configuration of the helm chart is necessary, otherwise either the steps of **6.2 - DEPLOYMENT OPTION 2 - kubectl** or **6.3 - DEPLOYMENT OPTION 3 - Helm** can be followed.
 
 ## Deployment of Service Instances
 
