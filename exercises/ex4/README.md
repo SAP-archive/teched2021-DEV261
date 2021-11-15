@@ -4,7 +4,7 @@
 
 The CAP application relies on a number of different tools which are needed to build and deploy the application. To streamline the installation of these components, a base or parent image can be used with these tools already installed. This container is setup with the *cds* and *ui5* build tools, *openssl* and *jq*. It is then used used by the other containers as their parent image.
 
-> ⚠ NOTE: This step is only required if has not been previously configured with [CI CD JOB](../ex3#exercise-354---capuitools---optional)
+> ⚠ NOTE: This step is only required if you haven't created the [CICD job called 'capuitools'](../ex3#exercise-354---capuitools---optional)
 
 ## Build and Push the Docker image
 
