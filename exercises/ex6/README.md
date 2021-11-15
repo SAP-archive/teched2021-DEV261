@@ -22,7 +22,7 @@ To do the deployment execute the following steps:
 
 ## Exercise 6.1 - DEPLOYMENT OPTION 1 - CICD Service
 
-- Open the file **/resources/html5/helm/orders-html5-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/html5/orders-html5-deployer/orders-html5-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 
 ## Exercise 6.2 - DEPLOYMENT OPTION 2 - kubectl
@@ -52,7 +52,7 @@ To do the deployment execute the following steps:
   docker push {your-docker-account}/orders-html5-deployer
   ```
 
-- Open the file **/resources/db/helm/html5/values.yaml** and replace **{your-docker-account}** with your Docker account id
+- Open the file **/resources/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 - Install the Helm chart
 
