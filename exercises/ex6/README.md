@@ -4,6 +4,8 @@
 
 In the step we will deploy the static HTML5 application to the **HTML5 Application** service of BTP. Depending on the previous setup choose the desired method for deployment. If the relating job ['orders-html5-deployer' was configured within the SAP CICD service](../ex3#exercise-352---orders-html5-deployer---optional) then only the configuration of the helm chart is necessary, otherwise either the steps of **6.2 - DEPLOYMENT OPTION 2 - kubectl** or **6.3 - DEPLOYMENT OPTION 3 - Helm** can be followed.
 
+> ⚠ NOTE: The job is using [npm @sap/html5-app-deployer package](https://www.npmjs.com/package/@sap/html5-app-deployer). Refer to the Kubernetes samples for further details.
+
 ## Deployment of Service Instances
 
 We will also deploy the BACKEND_DESTINATION to the service. This requires a few service instances to be generated which are defined within the file **service-instances.yaml**.

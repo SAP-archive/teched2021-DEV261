@@ -37,7 +37,9 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 - [nodejs version 14.\*](https://nodejs.org/en/download/)
 - [jq](https://stedolan.github.io/jq/) - for JSON processing in CLI
 - [Docker Desktop](https://www.docker.com/) installed with a valid public account
-  > Be aware of the terms of Docker for usage in enterprises. For details see [link](https://www.docker.com/blog/updating-product-subscriptions/)
+  > ⚠ NOTE: Be aware of the terms of Docker for usage in enterprises. For details see [link](https://www.docker.com/blog/updating-product-subscriptions/)
+
+> ⚠ NOTE: The various hands-on exercises uses [docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/) extensively. A basic knowledge of these technoogies will also be helpful.
 
 ## Exercises
 
