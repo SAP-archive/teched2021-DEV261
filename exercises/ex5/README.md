@@ -4,7 +4,7 @@
 
 The goal of this exercise is to deploy the CAP application database into the SAP HANA Cloud.
 
-Depending on the previous setup choose the desired method for deployment. If the relating job was configured within the SAP CICD service then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
+Depending on the previous setup choose the desired method for deployment. If the relating job called ['orders-db-deployer' was configured within the SAP CICD service](../ex3#exercise-353---orders-db-deployer---optional) then only the configuration of the helm chart is necessary, otherwise either the helm or the kubectl steps can be followed.
 
 ## Prework
 
