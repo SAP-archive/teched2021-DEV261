@@ -28,7 +28,7 @@ In the pop-up, choose the entitlements:
 
 | Entitlement                               | Plan                                                                                                     |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `Alert Notification                       | `Standard` plan
+| `Alert Notification`                      | `Standard` plan
 | `Continuous Integration & Delivery`       | `default (Application)` or the `trial (Application)` or `free (Application)` plans which are not charged |
 | `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)                                      |
 | `Launchpad Service` (if not yet entitled) | `standard (Application)` or `free (Application)`                                                         |
