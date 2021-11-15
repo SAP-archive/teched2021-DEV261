@@ -27,7 +27,7 @@ The file **resources/alertnotif/deployment.yaml** will be applied after a few mo
 - Apply the resources to your Kyma cluster
 
   ```shell
-  kubectl -n cap apply -f ./deployers/alertnotif/deployment.yaml
+  kubectl -n cap apply -f ./resources/alertnotif/deployment.yaml
   ```
 
 - Once applied you should receive an automated email from **SAP Alert Notification service** asking you to confirm the subscription to the action.
