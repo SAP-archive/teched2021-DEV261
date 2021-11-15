@@ -71,7 +71,7 @@ In order to trigger the deployment via [Helm](https://helm.sh/) execute the foll
 The service will be accessible now via the url `https://cap-orders-service.<cluster url>`.
 
 You can check also check settings of the API rule in the Kyma console. Navigate to the cap namespace. From there goto the `Discovery and Network -> API Rules` The rule has the name **cap-orders-service**
-![Kyma Console - API Rules](/exercises/ex7/images/kymaconsole_apirules.png)
+![Kyma Console - API Rules](./images/kymaconsole_apirules.png)
 
 ## Summary
 
