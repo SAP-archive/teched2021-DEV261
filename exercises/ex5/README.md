@@ -27,8 +27,6 @@ To push the Docker files we will create in the next steps to the right registry 
 
 ## Exercise 5.2 - DEPLOYMENT OPTION 2 - kubectl
 
-- Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
-- Save the changes
 - Build and push the container to your docker account
 
   ```shell
@@ -47,8 +45,6 @@ To push the Docker files we will create in the next steps to the right registry 
 
 ## Exercise 5.3 - DEPLOYMENT OPTION 3 - Helm
 
-- Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
-- Save the changes
 - Build and push the container to your docker account
 
   ```shell
