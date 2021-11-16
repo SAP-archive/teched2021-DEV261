@@ -30,7 +30,7 @@ In order to trigger the deployment via the SAP CICD service execute the followin
 
 - Open the file **/resources/db/helm/cap-orders-service/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
-- Commit the changes to your GitHub repository
+- Commit and push the changes to your GitHub repository
 
 The commit to your GitHub repository will trigger the SAP CICD service to start working on the pipeline. 
 
