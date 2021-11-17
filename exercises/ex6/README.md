@@ -62,6 +62,27 @@ To do the deployment execute the following steps:
   helm install orders-html5-deployer ./resources/db/helm/orders-html5-deployer -n cap
   ```
 
+## Verify
+
+You can check the status and logs of the Kubernetes Job
+
+```shell
+kubectl -n cap get job orders-html5-deployer
+```
+
+The results should be similar to below:
+
+```
+NAME                    COMPLETIONS   DURATION   AGE
+orders-html5-deployer   1/1           14s        101m
+```
+
+To check the logs, run
+
+```shell
+kubectl -n cap logs job/orders-html5-deployer
+```
+
 ## Summary
 
 🎉 Congratulations - You've now deployed the HTML5 app and thge launchpad configuration.

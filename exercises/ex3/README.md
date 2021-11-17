@@ -102,7 +102,7 @@ In this step we will configure the jobs to build each piece of the application. 
 
 > ⚠ NOTE: The SAP Trial and Free tier are limited to two job configurations and one parallel build. For the exercise the creation of the job `cap-orders-service` is mandatory. The kubectl or helm commands can be used to deploy the other resources.
 
-> ⚠ NOTE: At this point of the tutorial, the **CICD jobs will fail**. The following steps will describe how to create and configure the jobs. In later exercises, you will make changes to your forked GitHub repository and once you commit these later changes, the jobs will run successfully. 
+> ⚠ NOTE: At this point of the tutorial, the **most of the CICD jobs will fail**. The following steps will describe how to create and configure the jobs. In later exercises, you will make changes to your forked GitHub repository and once you commit these later changes, the jobs will run successfully.
 
 ### Exercise 3.5.1 - CAP-ORDERS-SERVICE
 
@@ -208,6 +208,8 @@ Choose `Create`.
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/capui5tools/Dockerfile**
+  - Trigger the capui5tools Job to build the image and push it to to the docker repository.
+    ![trigger-capui5tools-cicdjob](./../ex4/images/trigger-capui5tools-cicdjob.png)
 
 ## Summary
 

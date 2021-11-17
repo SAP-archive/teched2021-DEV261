@@ -52,6 +52,7 @@ To push the Docker files we will create in the next steps to the right registry 
 
   docker push {your-docker-account}/orders-db-deployer
   ```
+
 - Open the file **/resources/db/helm/orders-db-deployer/values.yaml** and replace **{your-docker-account}** with your Docker account id
 - Save the changes
 - Install the Helm chart
@@ -59,6 +60,27 @@ To push the Docker files we will create in the next steps to the right registry 
   ```shell
   helm install orders-db-deployer ./resources/db/helm/orders-db-deployer -n cap
   ```
+
+## Verify
+
+You can check the status and logs of the Kubernetes Job
+
+```shell
+kubectl -n cap get job orders-db-deployer
+```
+
+The results should be similar to below:
+
+```
+NAME                 COMPLETIONS   DURATION   AGE
+orders-db-deployer   1/1           23s        99m
+```
+
+To check the logs, run
+
+```shell
+kubectl -n cap logs job/orders-db-deployer
+```
 
 ## Summary
 

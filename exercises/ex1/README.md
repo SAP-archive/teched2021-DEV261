@@ -39,7 +39,7 @@ Replace the value of `cluster domain` with the Kyma cluster domain url.
     \"URL\":\"https://cap-orders-service.{cluster domain}\"}]"
 ```
 
-Now it's time to apply the configmap to the cluster.
+Now it's time to apply the secret to the cluster.
 
 ```shell
 kubectl -n cap apply -f ./credentials/html5-config-secret.yaml
