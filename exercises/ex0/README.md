@@ -13,7 +13,7 @@ Open the webview of the this repository. On the top right, choose the option `Fo
 Once the creation of the fork is complete, clone the repo in a directory of your choice and open it in your desired editor
 
 ```shell
-git clone https://github.com/SAP-samples/teched2021-DEV261.git
+git clone <your forked repository's clone url>
 ```
 
 After opening the project create the folder `credentials` within the root directory of the project. This will be used to store files containing credentials which will not be tracked within your git repo as it is excluded via the **.gitignore** file.
