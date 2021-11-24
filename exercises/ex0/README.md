@@ -18,6 +18,12 @@ git clone <your forked repository's clone url>
 
 After opening the project create the folder `credentials` within the root directory of the project. This will be used to store files containing credentials which will not be tracked within your git repo as it is excluded via the **.gitignore** file.
 
+## Selecting the subaccount region(s)
+
+On SAP BTP trial, only a subaccount in the region cf-us-10 works out for this tutorial. Trial subaccounts in cf-ap21 on MS Azure don’t include SAP HANA Cloud nor the SAP CICD service.
+
+For the SAP BTP free tier, the recommendation is as well to use an AWS-based subaccount, but you can pick more regions. Kyma runtime in the free tier is only available on AWS. If you need to have SAP HANA Cloud on MS Azure, pick a region in which you can create a second subaccount with Kyma in the same region, e.g. Netherlands (Azure) and Frankfurt (AWS), Sydney (Azure & AWS), Tokyo (Azure & AWS), US East (Azure & AWS)
+
 ## Configure Subaccount entitlements
 
 In the SAP BTP global account choose `Entitlements` -> `Entity Assignments`. Choose your subaccount and choose `Go`. This will list all assigned entitlements.
