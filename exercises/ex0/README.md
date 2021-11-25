@@ -2,9 +2,9 @@
 
 ## Goal 🎯
 
-This hands-on will combine many different SAP BTP services inside the SAP BTP, Kyma runtime. In this excercise we will prepare your SAP BTP account to walk through the hands-on session. Be aware that the preparation will require some time in itself.
+This hands-on will combine many different SAP BTP services inside the SAP BTP, Kyma runtime. In this exercise we will prepare your SAP BTP account to walk through the hands-on session. Be aware that the preparation will require some time in itself.
 
-> ⚠ NOTE: Not all services are availabe in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add the service
+> ⚠ NOTE: Not all services are available in all regions. In the case that a service is not available create an additional subaccount in the necessary region to add the service
 
 ## Fork and Clone the Repository
 
@@ -41,7 +41,7 @@ In the pop-up, choose the entitlements:
 | `SAP HANA Cloud`                          | `hana`                                                                                                   |
 | `SAP HANA Schemas & HDI Containers`       | `hdi-shared`                                                                                             |
 
-Chsose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
+Choose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
 
 ## Kyma runtime
 
