@@ -4,7 +4,7 @@
 
 SAP Continuous Integration and Delivery (SAP CICD) lets you configure and run predefined continuous integration and delivery (CI/CD) pipelines that automatically test, build, and deploy your code changes to speed up your development and delivery cycles. SAP CICD supports a number of different use cases including the creation of pipelines used for the development of container-based applications.
 
-This exercise will provide the necessary steps to configure and utlize a container-based applications pipeline which will deploy the CAP application into the Kyma runtime.
+This exercise will provide the necessary steps to configure and utilize a container-based applications pipeline which will deploy the CAP application into the Kyma runtime.
 
 ## Open the SAP CICD service
 

@@ -8,7 +8,7 @@ The goal of this exercise is to reconfigure the API rule in Kyma so that authent
 
 ## API Rule with OAuth2
 
-First we change the configuration of the API rule that was applied, when we initially deployed the CAP service in [excercise 7](../ex7/README.md):
+First we change the configuration of the API rule that was applied, when we initially deployed the CAP service in [exercise 7](../ex7/README.md):
 
 ```yaml
 apiVersion: gateway.kyma-project.io/v1alpha1
@@ -90,11 +90,11 @@ Let us create the OAuth client in Kyma and retrieve the needed credentials:
 
     ![Kyma Create OAuth Client](./images/kyma_OAuth_Step2.png)
 
-After the creation you will be forewarded to the overview screen of the newly created OAuth client. On this screen in the section **Secret cap-action** press the action **Decode** and copy the decoded values for Client ID and Client Secret
+After the creation you will be forwarded to the overview screen of the newly created OAuth client. On this screen in the section **Secret cap-action** press the action **Decode** and copy the decoded values for Client ID and Client Secret
 
 ![Kyma Copy Secrets](./images/kyma_OAuth_Step3.png)
 
-To get a valid token for the call to the endpoint of the **submitorder** action we must first retrive the token making use of the credentials we have just copied. To be able to do so we must first _encode_ them in base64 in the format `<client id>:<client secret> `.
+To get a valid token for the call to the endpoint of the **submitorder** action we must first retrieve the token making use of the credentials we have just copied. To be able to do so we must first _encode_ them in base64 in the format `<client id>:<client secret> `.
 
 You have the following options to do the encoding:
 
@@ -151,7 +151,7 @@ Copy the value of the **access_token** as this will be needed in the call to the
   curl.exe '-X' 'POST' 'https://cap-orders-service.<cluster url>/external/submitorder' '-H' 'Content-Type: application/json' '-H' 'Authorization: Bearer <access_token>' '-d' '{\"orderNo\": 123123}'
   ```
 
-This call is now sucessfully authenticated due to the provided access token, but will fail with the error `an error occurred...`. This occurrs due to the **MOCK_HOST** of the **components/src/orders-service.js** not being defined. Utlizing the logs you will also find that the call to the **Alert Notification** service fails too. This will be resolved in the next exercises.
+This call is now successfully authenticated due to the provided access token, but will fail with the error `an error occurred...`. This occurs due to the **MOCK_HOST** of the **components/src/orders-service.js** not being defined. Utilizing the logs you will also find that the call to the **Alert Notification** service fails too. This will be resolved in the next exercises.
 
 ## Summary
 

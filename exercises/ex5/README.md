@@ -13,9 +13,9 @@ The structure of the database is defined within the file **/db/schema.cds**. You
 There are two resources related to the creation of the database:
 
 - A Kubernetes secret **orders-vcap-services** containing the vcap-services credentials defined in previous steps
-- A Kubernetes job which processes the deployemnt relying on the vcap-services credential
+- A Kubernetes job which processes the deployment relying on the vcap-services credential
 
-To push the Docker files we will create in the next steps to the right registry execute the folowing steps:
+To push the Docker files we will create in the next steps to the right registry execute the following steps:
 
 - Open the file **/resources/db/Dockerfile** and replace **{your-docker-account}** with your Docker account id
 - Save the changes

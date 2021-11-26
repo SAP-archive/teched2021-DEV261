@@ -25,7 +25,7 @@ The overall solution will finally look like this:
 
 ![Solution Diagram](./assets/solution-diagram.png)
 
-You will also see how to setup your continous integration and delivery pipeline using "[SAP Continuous Integration and Delivery](https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery)" for deploying a CAP application.
+You will also see how to setup your continuous integration and delivery pipeline using "[SAP Continuous Integration and Delivery](https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery)" for deploying a CAP application.
 
 ## Requirements
 
@@ -39,7 +39,7 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 - [Docker Desktop](https://www.docker.com/) installed with a valid public account
   > ⚠ NOTE: Be aware of the terms of Docker for usage in enterprises. For details see [link](https://www.docker.com/blog/updating-product-subscriptions/)
 
-> ⚠ NOTE: The various hands-on exercises uses [docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/) extensively. A basic knowledge of these technoogies will also be helpful.
+> ⚠ NOTE: The various hands-on exercises uses [docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/) extensively. A basic knowledge of these technologies will also be helpful.
 
 ## Exercises
 

@@ -2,7 +2,7 @@
 
 ## Goal 🎯
 
-The SAP Alert Notification allows users/groups to subscripe to a number of different event types which can be received on a number of different platforms. In this scenario we will create an instance of the SAP Alert Notification service which will generate an alert when the **MOCK_HOST** of the **components/src/orders-service.js** is not available. The alert will be configured to be sent to an email address.
+The SAP Alert Notification allows users/groups to subscribe to a number of different event types which can be received on a number of different platforms. In this scenario we will create an instance of the SAP Alert Notification service which will generate an alert when the **MOCK_HOST** of the **components/src/orders-service.js** is not available. The alert will be configured to be sent to an email address.
 
 The file **resources/alertnotif/deployment.yaml** will be applied after a few modifications. This will generate the following resources:
 
@@ -36,7 +36,7 @@ The file **resources/alertnotif/deployment.yaml** will be applied after a few mo
 ## Modify the CAP application
 
 - Within the CAP service definition **components/srv/orders-service.js** there is a check to determine if the value of **ALERT_NOTIF_SRV** has been set when an error occurs. If set, this will call the serverless function **alert-notif** to submit an event to the SAP Alert Notification service.
-- Within the file **deployers/service/deployment_w_cm.yaml** find and set the value `ALERT_NOTIF_SRV: "alert-notif.cap.svc.cluster.local"`
+- Within the file **resources/service/deployment_w_cm.yaml** find and set the value `ALERT_NOTIF_SRV: "alert-notif.cap.svc.cluster.local"`
 - Apply the changes to your Kyma cluster
 
   ```shell
@@ -57,7 +57,7 @@ Using the **access_token** obtained in the previous exercise call the **external
   curl.exe '-X' 'POST' 'https://cap-orders-service.<cluster url>/external/submitorder' '-H' 'Content-Type: application/json' '-H' 'Authorization: Bearer <access_token>' '-d' '{\"orderNo\": 123123}'
   ```
 
-This call will fail with the error `an error occurred...`, but you should now receive an email from the SAP Alert Notification service indicating an event type of **system_down_condition**. The next exericse will resolve the error condition.
+This call will fail with the error `an error occurred...`, but you should now receive an email from the SAP Alert Notification service indicating an event type of **system_down_condition**. The next exercise will resolve the error condition.
 
 ## Summary
 
