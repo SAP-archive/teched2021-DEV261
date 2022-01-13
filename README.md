@@ -43,6 +43,8 @@ Furthermore, you need to have the following tools and frameworks installed on yo
 
 > ⚠ NOTE: The various hands-on exercises uses [docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/) extensively. A basic knowledge of these technologies will also be helpful.
 
+- For MS Windows clients, it is recommended to use [PowerShell](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d)
+
 ## Exercises
 
 - [Getting Started](exercises/ex0/)
