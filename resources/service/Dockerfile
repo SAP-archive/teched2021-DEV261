@@ -8,7 +8,7 @@ COPY components .
 RUN ["cds", "build"]
 
 # Use the Node version that matches the version you have installed locally
-FROM node:14-slim
+FROM node:16-slim
 # Set to production to connect to HANA Cloud
 ENV NODE_ENV=production
 # Create app directory, in which the CAP service is built
