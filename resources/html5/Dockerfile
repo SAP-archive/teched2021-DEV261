@@ -9,7 +9,7 @@ RUN contents="$(jq '."sap.app".dataSources[].uri |= ltrimstr("/")' ./webapp/mani
 # build app
 RUN ui5 build
 
-FROM node:14-slim
+FROM node:16-slim
 # Create app directory
 WORKDIR /app
 # Copy app and required files
