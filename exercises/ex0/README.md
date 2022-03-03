@@ -34,7 +34,7 @@ In the pop-up, choose the entitlements:
 
 | Entitlement                               | Plan                                                                                                     |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `Alert Notification`                      | `Standard` plan
+| `Alert Notification`                      | `Standard` plan                                                                                          |
 | `Continuous Integration & Delivery`       | `default (Application)` or the `trial (Application)` or `free (Application)` plans which are not charged |
 | `Kyma runtime` (if not yet entitled)      | any available plan in the list (`trial` and `free` are not charged)                                      |
 | `Launchpad Service` (if not yet entitled) | `standard (Application)` or `free (Application)`                                                         |
@@ -53,17 +53,13 @@ A detailed step by step can be found in the following [tutorial](https://develop
 
 In the overview area of your subaccount choose the option to `Enable Kyma` runtime. If the button for enabling Kyma runtime is not showing up, ensure that the entitlement has been set correctly.
 
-### Assignment of role collection for Kyma
+### Assignment of Roles for Kyma
 
-After the enablement of Kyma runtime has finished, you need to assign yourself the respective role collection. To do so, chose `Security` -> `Users` in the menu on the left.
-
-Choose your user and the option `Assign Role Collection`. Assign the value `KymaRuntimeNamespaceAdmin__***` to yourself
+After the enablement of Kyma runtime has finished, your user will be automatically added as an Admin of the Kyma runtime. See the [Help Documentation](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/148ae38b7d6f4e61bbb696bbfb3996b2.html) for how to add additional users if necessary.
 
 ### Getting the Kubeconfig for CLI access and preparing Kyma runtime
 
-In the Overview area of your subaccount open the `Console URL` you find under `Kyma Environment`. At the top right of the window choose the user drop down and choose `Get Kubeconfig`. Be aware that this kubeconfig is only valid for _8 hours_.
-
-> ⚠ NOTE: If your user was just assigned to the `KymaRuntimeNamespaceAdmin`-Role-Collection and the Kyma console UI is rejecting access, try opening it in a private browsing window.
+In the Overview area of your subaccount open the `Link to dashboard` link which appears next to the `Console URL` under the `Kyma Environment` area. At the top left of the window choose the `Clusters Overview` drop down and choose your cluster. In the `Clusters Overview` window choose the `Download Kubeconfig` for your Kyma runtime to download your `KUBECONFIG`.
 
 Next set the kubeconfig to an environment variable:
 
