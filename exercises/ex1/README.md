@@ -18,7 +18,7 @@ Inside the Kyma console, open the namespace `cap`.
 
 Now open the service instance `cap-orders-xsuaa-instance` found under `Service Management` -> `Instances`.
 
-Choose the tab `Credentials` and choose the Secret `cap-orders-xsuaa-binding`.
+Choose the `cap-orders-xsuaa-instance` instance and choose the Secret `cap-orders-xsuaa-binding`.
 
 Choose the option `Decode` as these decoded values will need to be copied in the next steps.
 
@@ -30,7 +30,7 @@ Within the `html5-config-secret.yaml` file replace the following values with the
 
 ![Credentials](/exercises/ex1/images/01_01_001.png)
 
-Replace the value of `cluster domain` with the Kyma cluster domain url.
+Replace the value of `cluster domain` with the Kyma cluster domain url. This can be found on the main Kyma dashboard screen listed as `API Server Address` and shown as `https://api.{cluster domain}`
 
 ```yaml
     \"clientId\": \"{clientid}\",
@@ -79,32 +79,34 @@ Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` r
 
 ```json
 {
-  "xsuaa":[{
-    "name": "cpapp",
-        "label": "xsuaa",
-        "tags": ["xsuaa"],
-        "credentials": {
-            "apiurl": "https://api.authentication.{region}.hana.ondemand.com",
-            "clientid": "{clientid}",
-            "clientsecret": "{clientsecret}",
-            "credential-type": "instance-secret",
-            "identityzone": "{identityzone}",
-            "identityzoneid": "{identityzoneid}",
-            "sburl": "https://internal-xsuaa.authentication.{region}.hana.ondemand.com",
-            "subaccountid": "{subaccountid}",
-            "tenantid": "{tenantid}",
-            "tenantmode": "dedicated",
-            "uaadomain": "authentication.{region}.hana.ondemand.com",
-            "url": "{url}",
-            "verificationkey": "-----BEGIN PUBLIC KEY-----{verificationkey}-----END PUBLIC KEY-----",
-            "xsappname": "{xsappname}",
-            "zoneid": "{zoneid}"
-        } ,
-  }],
+  "xsuaa": [
+    {
+      "name": "cpapp",
+      "label": "xsuaa",
+      "tags": ["xsuaa"],
+      "credentials": {
+        "apiurl": "https://api.authentication.{region}.hana.ondemand.com",
+        "clientid": "{clientid}",
+        "clientsecret": "{clientsecret}",
+        "credential-type": "instance-secret",
+        "identityzone": "{identityzone}",
+        "identityzoneid": "{identityzoneid}",
+        "sburl": "https://internal-xsuaa.authentication.{region}.hana.ondemand.com",
+        "subaccountid": "{subaccountid}",
+        "tenantid": "{tenantid}",
+        "tenantmode": "dedicated",
+        "uaadomain": "authentication.{region}.hana.ondemand.com",
+        "url": "{url}",
+        "verificationkey": "-----BEGIN PUBLIC KEY-----{verificationkey}-----END PUBLIC KEY-----",
+        "xsappname": "{xsappname}",
+        "zoneid": "{zoneid}"
+      }
+    }
+  ],
   "hana": [
     {
       "binding_name": null,
-      "credentials":  {
+      "credentials": {
         "host": "{host}",
         "port": "443",
         "driver": "com.sap.db.jdbc.Driver",
@@ -115,7 +117,7 @@ Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` r
         "user": "{user}",
         "password": "{password}",
         "certificate": "-----BEGIN CERTIFICATE-----{certificate}-----END CERTIFICATE-----"
-      } ,
+      },
       "instance_name": "cpapp",
       "label": "cpapp",
       "name": "cpapp",
@@ -131,13 +133,13 @@ Copy the result into the `xsuaa.credentials` found in the `vcap_services.json` r
 
 Create a secret in Kyma containing the contents of this file executing the following steps.
 
-* If using a bash shell:
-  
+- If using a bash shell:
+
   ```shell
   kubectl -n cap create secret generic orders-vcap-services --from-literal "VCAP_SERVICES=$(<credentials/vcap_services.json)"
   ```
-  
-* If using PowerShell first convert the file into base64 by running:
+
+- If using PowerShell first convert the file into base64 by running:
 
   ```cmd
   [convert]::ToBase64String((Get-Content -path "credentials/vcap_services.json" -Encoding byte))
