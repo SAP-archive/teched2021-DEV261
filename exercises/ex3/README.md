@@ -104,6 +104,8 @@ In this step we will configure the jobs to build each piece of the application. 
 
 > ⚠ NOTE: At this point of the tutorial, the **most of the CICD jobs will fail**. The following steps will describe how to create and configure the jobs. In later exercises, you will make changes to your forked GitHub repository and once you commit these later changes, the jobs will run successfully.
 
+> ⚠ NOTE: In the **Release** the **Helm Values Secret** can be used as an alternative to the **Helm Values**. When choosing **Helm Values Secret** a drop down will appear allowing you to Create Credentials. Provide the name **cap-orders-service-helm-values** for the credentials and copy the contents on the **resources/service/helm/cap-orders-service/values.yaml** adjusting the value `{your-docker-account}` accordingly.
+
 ### Exercise 3.5.1 - CAP-ORDERS-SERVICE
 
 - Open the SAP CICD service and choose the tab **Jobs**
@@ -136,6 +138,8 @@ Choose `Create`.
 
 > Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
 
+> ⚠ NOTE: In the **Release** the **Helm Values Secret** can be used as an alternative to the **Helm Values**. When choosing **Helm Values Secret** a drop down will appear allowing you to Create Credentials. Provide the name **orders-html5-deployer-helm-values** for the credentials and copy the contents on the **resources/service/helm/orders-html5-deployer/values.yaml** adjusting the value `{your-docker-account}` accordingly.
+
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
 - Provide the values:
@@ -163,6 +167,8 @@ Choose `Create`.
 ### Exercise 3.5.3 - ORDERS-DB-DEPLOYER - OPTIONAL
 
 > Creating this CICD job is optional and the required setup can be performed alternatively. The instructions are provided in the later section.
+
+> ⚠ NOTE: In the **Release** the **Helm Values Secret** can be used as an alternative to the **Helm Values**. When choosing **Helm Values Secret** a drop down will appear allowing you to Create Credentials. Provide the name **orders-db-deployer-helm-values** for the credentials and copy the contents on the **resources/service/helm/orders-db-deployer/values.yaml** adjusting the value `{your-docker-account}` accordingly.
 
 - Open the SAP CICD service and choose the tab **Jobs**
 - Choose the plus sign to add an entry
