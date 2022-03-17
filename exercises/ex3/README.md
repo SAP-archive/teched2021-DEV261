@@ -13,7 +13,7 @@ This exercise will provide the necessary steps to configure and utilize a contai
 
 ## Exercise 3.1 - CREATE THE GITHUB CREDENTIAL
 
-This process will only be required if your GitHub repo is **not public**. 
+This process will only be required if your GitHub repo is **not public**.
 
 > ⚠ NOTE: If you forked this repo into your personal GitHub account, it most likely isn't public and will say `private` at the top left.
 
@@ -48,16 +48,16 @@ This step details the process of the creation of the access token used to perfor
 - Copy the value into the json below replacing `{token}`
 - Replace the `{docker-id}`
 
-    ```json
-    {
-      "auths": {
-        "https://index.docker.io/v1/": {
-          "username": "{docker-id}",
-          "password": "{token}"
-        }
+  ```json
+  {
+    "auths": {
+      "https://index.docker.io/v1/": {
+        "username": "{docker-id}",
+        "password": "{token}"
       }
     }
-    ```
+  }
+  ```
 
 - Open the SAP CICD service and choose the option **Credentials**
 - Choose the plus sign to add an entry
@@ -68,7 +68,7 @@ This step details the process of the creation of the access token used to perfor
 
 ## Exercise 3.3 - CONFIGURE KUBECONFIG
 
-To apply the configurations to the Kyma cluster we will need to authenticate to the Kyma cluster using a *kubeconfig*. A kubeconfig can be generated using a normal user which has an expiration time or a service account which does not. A *service account* is configured based on the APIs and their associated verbs available within the Kyma cluster. This service account can then be used to provide a non expiring kubeconfig which will be used by the SAP CICD service to apply the updated container images and associated kubernetes resources.
+To apply the configurations to the Kyma cluster we will need to authenticate to the Kyma cluster using a _kubeconfig_. A kubeconfig can be generated using a normal user which has an expiration time or a service account which does not. A _service account_ is configured based on the APIs and their associated verbs available within the Kyma cluster. This service account can then be used to provide a non expiring kubeconfig which will be used by the SAP CICD service to apply the updated container images and associated kubernetes resources.
 
 - Create the service account by following the tutorial: [Create a Kyma service account](https://developers.sap.com/tutorials/kyma-create-service-account.html)
 - Open the SAP CICD service and choose the tab **Credentials**
@@ -90,6 +90,7 @@ This step details the process of adding the GitHub repository container the code
 - Leave the rest of the values with their defaults and choose **Add**
 
 After the creation
+
 - Choose **Webhook Data** at the top of the just-created entry
 - There will be a link called `dev261` on the dialog which will navigate to **Settings -> Hooks** of the desigated repo
 - Choose **Add webhook**
@@ -119,7 +120,7 @@ In this step we will configure the jobs to build each piece of the application. 
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/cap-orders-service**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Enable **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/service/Dockerfile**
@@ -151,7 +152,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-html5-deployer**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Enable **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/html5/Dockerfile**
@@ -181,7 +182,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-db-deployer**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Enable **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/db/Dockerfile**
@@ -210,7 +211,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/capui5tools**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Enable **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/capui5tools/Dockerfile**
