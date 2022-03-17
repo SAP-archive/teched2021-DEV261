@@ -119,7 +119,7 @@ In this step we will configure the jobs to build each piece of the application. 
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/cap-orders-service**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Select **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/service/Dockerfile**
@@ -151,7 +151,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-html5-deployer**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Select **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/html5/Dockerfile**
@@ -181,7 +181,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/orders-db-deployer**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Select **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/db/Dockerfile**
@@ -210,7 +210,7 @@ Choose `Create`.
   - Stages
     - Container Registry URL: **<https://index.docker.io>**
     - Container Image Name: **\<docker id>/capui5tools**
-    - Container Image Tag: **latest**
+    - Container Image Tag: Select **Tag Container Image Automatically**
     - Container Registry Credentials: **dockercred**
   - Build
     - Container File Path: **resources/capui5tools/Dockerfile**
