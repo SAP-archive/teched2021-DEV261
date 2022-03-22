@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: {your-docker-account}/cap-orders-service
+  repository: stanisorre/cap-orders-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
