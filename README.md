@@ -1,5 +1,7 @@
 # DEV261 - Build Extensions with SAP BTP, Kyma Runtime
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2021-DEV261)](https://api.reuse.software/info/github.com/SAP-samples/teched2021-DEV261) 
+
 <img src="./assets/kyma-runtime.svg" width="300">
 
 ## Description
