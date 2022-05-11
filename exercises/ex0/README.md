@@ -40,6 +40,8 @@ In the pop-up, choose the entitlements:
 | `Launchpad Service` (if not yet entitled) | `standard (Application)` or `free (Application)`                                                         |
 | `SAP HANA Cloud`                          | `hana`                                                                                                   |
 | `SAP HANA Schemas & HDI Containers`       | `hdi-shared`                                                                                             |
+| `Authorization and Trust Management`      | `application`
+
 
 Choose `Add x Service Plans` in case you had to select any of the above and choose `Save`.
 
