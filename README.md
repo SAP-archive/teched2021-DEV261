@@ -8,7 +8,7 @@
 
 This repository contains the material for the SAP TechEd 2021 session called DEV261 - "Build Extensions with SAP BTP, Kyma Runtime".
 
-[The video replay is now available.](https://reg.sapevents.sap.com/flow/sap/sapteched2021/portal/page/sessions/session/16303673698250013Mdn)
+[The video replay is now available.](https://www.youtube.com/watch?v=5MwJQzRvijM)
 
 ## Overview
 
