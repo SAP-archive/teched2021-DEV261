@@ -1,34 +1,32 @@
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceInstance
 metadata:
   name: cap-orders-app-host-instance
 spec:
-  clusterServiceClassExternalName: html5-apps-repo
-  clusterServicePlanExternalName: app-host
+  serviceOfferingName: html5-apps-repo
+  servicePlanName: app-host
 ---
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceBinding
 metadata:
   name: cap-orders-app-host-binding
 spec:
-  instanceRef:
-    name: cap-orders-app-host-instance
+  serviceInstanceName: cap-orders-app-host-instance
 ---
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceInstance
 metadata:
   name: cap-orders-destination-instance
 spec:
-  clusterServiceClassExternalName: destination
-  clusterServicePlanExternalName: lite
+  serviceOfferingName: destination
+  servicePlanName: lite
   parameters:
     HTML5Runtime_enabled: true
     version: "1.0.0"
 ---
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceBinding
 metadata:
   name: cap-orders-destination-binding
 spec:
-  instanceRef:
-    name: cap-orders-destination-instance
+  serviceInstanceName: cap-orders-destination-instance
