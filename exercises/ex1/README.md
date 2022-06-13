@@ -16,9 +16,9 @@ kubectl -n cap apply -f ./resources/html5/xsuaa-service.yaml
 
 Inside the Kyma console, open the namespace `cap`.
 
-Now open the service instance `cap-orders-xsuaa-instance` found under `Service Management` -> `Instances`.
+Now open the service instance `cap-orders-xsuaa-instance` found under `Service Management` -> `BTP Service Bindings`.
 
-Choose the `cap-orders-xsuaa-instance` instance and choose the Secret `cap-orders-xsuaa-binding`.
+Choose the `cap-orders-xsuaa-binding` instance and choose the Secret `cap-orders-xsuaa-binding`.
 
 Choose the option `Decode` as these decoded values will need to be copied in the next steps.
 

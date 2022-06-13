@@ -1,10 +1,10 @@
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceInstance
 metadata:
   name: alert-notif-ser-instance
 spec:
-  clusterServiceClassExternalName: alert-notification
-  clusterServicePlanExternalName: standard
+  serviceOfferingName: alert-notification
+  servicePlanName: standard
   parameters:
     configuration:
       actions:
@@ -32,6 +32,21 @@ metadata:
   name: alert-notif
 spec:
   env:
+  - name: oauth_url
+    valueFrom:
+      secretKeyRef:
+        key: oauth_url
+        name: alert-notif-ser-binding
+  - name: client_id
+    valueFrom:
+      secretKeyRef:
+        key: client_id
+        name: alert-notif-ser-binding
+  - name: client_secret
+    valueFrom:
+      secretKeyRef:
+        key: client_secret
+        name: alert-notif-ser-binding          
   - name: AN_REGION
     value: US21 #provide your subaccount region
   - name: CLUSTER_DOMAIN
@@ -57,22 +72,10 @@ spec:
     \           }\n        },\n        eventTimestamp: cur_time,\n        priority:
     1\n    });\n}\n\n "
 ---
-apiVersion: servicecatalog.k8s.io/v1beta1
+apiVersion: services.cloud.sap.com/v1
 kind: ServiceBinding
 metadata:
   name: alert-notif-ser-binding
 spec:
-  instanceRef:
-    name: alert-notif-ser-instance
----
-apiVersion: servicecatalog.kyma-project.io/v1alpha1
-kind: ServiceBindingUsage
-metadata:
-  name: alert-notif-ser-bind-usage
-spec:
-  serviceBindingRef:
-    name: alert-notif-ser-binding
-  usedBy:
-    kind: serverless-function
-    name: alert-notif
+  serviceInstanceName: alert-notif-ser-instance
   
